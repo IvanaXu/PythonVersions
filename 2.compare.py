@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from config.date import Ldate
 
 path = "Version/"
 data = []
@@ -74,7 +75,9 @@ with open("README.md", "w") as f:
     f.write("![](./environment/M1-ENV.png)\n\n")
 
     f.write("### 1.Versions\n")
-    for i in pd.DataFrame(TASK, columns=["version"]).to_markdown(index=None):
+    idf = pd.DataFrame(TASK, columns=["version"])
+    idf["date"] = idf["version"].apply(lambda x: Ldate.get(x, ""))
+    for i in idf.to_markdown(index=None):
         f.write(i)
     f.write("\n\n")
 
