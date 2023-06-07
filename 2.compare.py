@@ -82,7 +82,8 @@ with open("README.md", "w") as f:
     idf["UP%"] = idf["version"].apply(lambda x: Lup.get(x, {}).get("UP%", ""))
     # TOP = 5
     # idf["Rank"] = idf["UP%"].rank(ascending=False).apply(lambda x: max(TOP-int(x)+1, 0) * "🌹")
-    idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
+    # idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
+    idf["Rank"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100*5) * "+")
     print(idf)
 
     for i in idf.to_markdown(index=None):
