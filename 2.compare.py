@@ -80,7 +80,8 @@ with open("README.md", "w") as f:
     idf = pd.DataFrame(TASK, columns=["version"])
     idf["date"] = idf["version"].apply(lambda x: Ldate.get(x, ""))
     idf["UP%"] = idf["version"].apply(lambda x: Lup.get(x, {}).get("UP%", ""))
-    idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
+    TOP = 5
+    idf["Rank"] = idf["UP%"].rank(ascending=False).apply(lambda x: max(TOP-int(x)+1, 0) * "🌹")
     print(idf)
 
     for i in idf.to_markdown(index=None):
