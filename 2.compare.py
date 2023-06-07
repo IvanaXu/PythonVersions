@@ -69,6 +69,8 @@ cdata.loc["SUM"] = [""] + [round(cdata0[icol].sum(), 4) for icol in  TASK]
 cdata.loc["AVG"] = [""] + [round(cdata0[icol].mean(), 4) for icol in  TASK]
 _max = max([cdata0[icol].sum() for icol in  TASK])
 cdata.loc["UP%"] = [""] + [f"{_max/cdata0[icol].sum():.4%}" for icol in  TASK]
+Lup = cdata[cdata.index == "UP%"].to_dict()
+
 
 with open("README.md", "w") as f:
     f.write("### 0.Environment\n")
@@ -77,6 +79,10 @@ with open("README.md", "w") as f:
     f.write("### 1.Versions\n")
     idf = pd.DataFrame(TASK, columns=["version"])
     idf["date"] = idf["version"].apply(lambda x: Ldate.get(x, ""))
+    idf["UP%"] = idf["version"].apply(lambda x: Lup.get(x, {}).get("UP%", ""))
+    idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
+    print(idf)
+
     for i in idf.to_markdown(index=None):
         f.write(i)
     f.write("\n\n")
