@@ -4,7 +4,7 @@ from config.date import Ldate
 
 path = "Version/"
 data = []
-fTASK = lambda x: float(x.replace("M1-3.", "").replace("3.", ""))
+fTASK = lambda x: tuple([int(i) for i in x.split(".")])
 TASK = sorted(
     [
         i for i in os.listdir(path) 
