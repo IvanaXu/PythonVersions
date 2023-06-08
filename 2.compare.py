@@ -72,30 +72,45 @@ cdata.loc["UP%"] = [""] + [f"{_max/cdata0[icol].sum():.4%}" for icol in  TASK]
 Lup = cdata[cdata.index == "UP%"].to_dict()
 
 
+FIRST = """
+### 0.Readme
+#### (1) Python Versions
+> https://www.python.org/downloads/
+#### (2) Running Environment
+![](./environment/M1-ENV.png)
+#### (3) 
+* [pyperformance](https://github.com/python/pyperformance)
+
+"""
+
 with open("README.md", "w") as f:
-    f.write("### 0.Environment\n")
-    f.write("![](./environment/M1-ENV.png)\n\n")
+    f.write(FIRST)
+
 
     f.write("### 1.Versions\n")
     idf = pd.DataFrame(TASK, columns=["version"])
     idf["date"] = idf["version"].apply(lambda x: Ldate.get(x, ""))
     idf["UP%"] = idf["version"].apply(lambda x: Lup.get(x, {}).get("UP%", ""))
+
     # TOP = 5
     # idf["Rank"] = idf["UP%"].rank(ascending=False).apply(lambda x: max(TOP-int(x)+1, 0) * "🌹")
     # idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
-    idf["Rank"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100*5) * "+")
+    
+    idf["Progress"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100*5) * "+")
     print(idf)
 
     for i in idf.to_markdown(index=None):
         f.write(i)
     f.write("\n\n")
 
-    f.write("### 2.Source\n")
+
+    f.write("### 2.Details\n")
     for i in sdata.fillna("/").to_markdown():
         f.write(i)
     f.write("\n\n")
 
-    f.write("### 3.Change(UNIT: ms)\n")
+
+    f.write("### 3.Calculation(UNIT: ms)\n")
     for i in cdata.fillna("/").to_markdown():
         f.write(i)
     f.write("\n\n")
