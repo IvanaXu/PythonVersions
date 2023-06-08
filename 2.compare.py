@@ -78,7 +78,7 @@ FIRST = """
 > https://www.python.org/downloads/
 #### (2) Running Environment
 <p align="center">
-<img src="./environment/M1-ENV.png" width=200>
+<img src="./environment/M1-ENV.png" width=300>
 </p>
 
 #### (3) Test Software
