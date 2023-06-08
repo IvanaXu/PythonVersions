@@ -77,9 +77,12 @@ FIRST = """
 #### (1) Python Versions
 > https://www.python.org/downloads/
 #### (2) Running Environment
-![](./environment/M1-ENV.png)
-#### (3) 
-* [pyperformance](https://github.com/python/pyperformance)
+<p align="center">
+<img src="./environment/M1-ENV.png" width=200>
+</p>
+
+#### (3) Test Software
+* [Pyperformance](https://github.com/python/pyperformance)
 
 """
 
