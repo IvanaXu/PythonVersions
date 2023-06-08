@@ -3,6 +3,8 @@
 #### (1) Python Versions
 > https://www.python.org/downloads/
 #### (2) Running Environment
+* Docker gcc library/gcc
+
 <p align="center">
 <img src="./environment/M1-ENV.png" width=300>
 </p>
