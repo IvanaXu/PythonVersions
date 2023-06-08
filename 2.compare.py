@@ -102,7 +102,7 @@ with open("README.md", "w") as f:
     # idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
     
     TOP = 10
-    idf["Progress"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100 * TOP) * "+")
+    idf["Progress"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100 * TOP) * ">")
     idf["rank"] = idf["version"].apply(fTASK)
     idf.sort_values("rank", inplace=True)
     print(idf)
