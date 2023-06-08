@@ -4,12 +4,12 @@ from config.date import Ldate
 
 path = "Version/"
 data = []
+fTASK = lambda x: float(x.replace("M1-3.", "").replace("3.", ""))
 TASK = sorted(
     [
         i for i in os.listdir(path) 
         if "3." in i and os.path.exists(f"{path}{i}/py{i}.log")
-    ],
-    key=lambda x: float(x.replace("M1-3.", "").replace("3.", ""))
+    ], key=fTASK
 )
 print(TASK)
 
@@ -100,9 +100,11 @@ with open("README.md", "w") as f:
     # idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
     
     idf["Progress"] = idf["UP%"].apply(lambda x: int(float(x[:-1])/100*5) * "+")
+    idf["rank"] = idf["version"].apply(fTASK)
+    idf.sort_values("rank", inplace=True)
     print(idf)
 
-    for i in idf.to_markdown(index=None):
+    for i in idf[["version", "date", "UP%", "Progress"]].to_markdown(index=None):
         f.write(i)
     f.write("\n\n")
 
@@ -117,3 +119,6 @@ with open("README.md", "w") as f:
     for i in cdata.fillna("/").to_markdown():
         f.write(i)
     f.write("\n\n")
+
+
+
