@@ -1,0 +1,301 @@
+Performance version: 1.0.8
+Report on Linux-5.15.49-linuxkit-pr-aarch64-with-glibc2.36
+Number of logical CPUs: 4
+Start date: 2023-06-08 19:43:23.317432
+End date: 2023-06-08 20:39:20.779092
+
+### 2to3 ###
+Mean +- std dev: 250 ms +- 18 ms
+
+### async_generators ###
+Mean +- std dev: 282 ms +- 13 ms
+
+### async_tree_none ###
+Mean +- std dev: 572 ms +- 41 ms
+
+### async_tree_cpu_io_mixed ###
+Mean +- std dev: 845 ms +- 63 ms
+
+### async_tree_eager ###
+Mean +- std dev: 567 ms +- 40 ms
+
+### async_tree_eager_cpu_io_mixed ###
+Mean +- std dev: 819 ms +- 46 ms
+
+### async_tree_eager_io ###
+Mean +- std dev: 1.45 sec +- 0.08 sec
+
+### async_tree_eager_memoization ###
+Mean +- std dev: 671 ms +- 54 ms
+
+### async_tree_io ###
+Mean +- std dev: 1.43 sec +- 0.07 sec
+
+### async_tree_memoization ###
+Mean +- std dev: 661 ms +- 34 ms
+
+### asyncio_tcp ###
+Mean +- std dev: 796 ms +- 32 ms
+
+### asyncio_tcp_ssl ###
+Mean +- std dev: 2.46 sec +- 0.71 sec
+
+### chameleon ###
+Mean +- std dev: 6.78 ms +- 0.27 ms
+
+### chaos ###
+Mean +- std dev: 77.9 ms +- 2.8 ms
+
+### comprehensions ###
+Mean +- std dev: 19.9 us +- 0.9 us
+
+### bench_mp_pool ###
+Mean +- std dev: 9.44 ms +- 0.81 ms
+
+### bench_thread_pool ###
+Mean +- std dev: 1.22 ms +- 0.06 ms
+
+### coroutines ###
+Mean +- std dev: 23.3 ms +- 0.9 ms
+
+### coverage ###
+Mean +- std dev: 46.5 ms +- 1.1 ms
+
+### crypto_pyaes ###
+Mean +- std dev: 89.9 ms +- 3.2 ms
+
+### dask ###
+Mean +- std dev: 514 ms +- 91 ms
+
+### deepcopy ###
+Mean +- std dev: 314 us +- 18 us
+
+### deepcopy_reduce ###
+Mean +- std dev: 2.72 us +- 0.06 us
+
+### deepcopy_memo ###
+Mean +- std dev: 38.2 us +- 4.2 us
+
+### deltablue ###
+Mean +- std dev: 5.64 ms +- 0.33 ms
+
+### django_template ###
+Mean +- std dev: 33.2 ms +- 1.4 ms
+
+### docutils ###
+Mean +- std dev: 2.26 sec +- 0.07 sec
+
+### dulwich_log ###
+Mean +- std dev: 51.1 ms +- 2.1 ms
+
+### fannkuch ###
+Mean +- std dev: 336 ms +- 5 ms
+
+### float ###
+Mean +- std dev: 93.8 ms +- 2.4 ms
+
+### create_gc_cycles ###
+Mean +- std dev: 1.02 ms +- 0.05 ms
+
+### gc_traversal ###
+Mean +- std dev: 2.99 ms +- 0.13 ms
+
+### generators ###
+Mean +- std dev: 32.3 ms +- 0.8 ms
+
+### genshi_text ###
+Mean +- std dev: 20.1 ms +- 1.3 ms
+
+### genshi_xml ###
+Mean +- std dev: 41.3 ms +- 1.3 ms
+
+### go ###
+Mean +- std dev: 177 ms +- 12 ms
+
+### hexiom ###
+Mean +- std dev: 7.03 ms +- 0.30 ms
+
+### html5lib ###
+Mean +- std dev: 51.0 ms +- 2.7 ms
+
+### json_dumps ###
+Mean +- std dev: 12.0 ms +- 0.3 ms
+
+### json_loads ###
+Mean +- std dev: 26.8 us +- 0.7 us
+
+### logging_format ###
+Mean +- std dev: 6.56 us +- 0.19 us
+
+### logging_silent ###
+Mean +- std dev: 143 ns +- 12 ns
+
+### logging_simple ###
+Mean +- std dev: 6.18 us +- 0.20 us
+
+### mako ###
+Mean +- std dev: 12.2 ms +- 0.4 ms
+
+### mdp ###
+Mean +- std dev: 2.79 sec +- 0.08 sec
+
+### meteor_contest ###
+Mean +- std dev: 86.9 ms +- 3.0 ms
+
+### nbody ###
+Mean +- std dev: 95.5 ms +- 2.3 ms
+
+### nqueens ###
+Mean +- std dev: 72.4 ms +- 0.9 ms
+
+### pathlib ###
+Mean +- std dev: 19.2 ms +- 1.3 ms
+
+### pickle ###
+Mean +- std dev: 8.94 us +- 0.16 us
+
+### pickle_dict ###
+Mean +- std dev: 25.0 us +- 0.6 us
+
+### pickle_list ###
+Mean +- std dev: 3.81 us +- 0.09 us
+
+### pickle_pure_python ###
+Mean +- std dev: 344 us +- 14 us
+
+### pidigits ###
+Mean +- std dev: 216 ms +- 3 ms
+
+### pprint_safe_repr ###
+Mean +- std dev: 735 ms +- 21 ms
+
+### pprint_pformat ###
+Mean +- std dev: 1.50 sec +- 0.04 sec
+
+### pyflate ###
+Mean +- std dev: 508 ms +- 23 ms
+
+### python_startup ###
+Mean +- std dev: 14.7 ms +- 1.7 ms
+
+### python_startup_no_site ###
+Mean +- std dev: 7.87 ms +- 0.76 ms
+
+### raytrace ###
+Mean +- std dev: 373 ms +- 8 ms
+
+### regex_compile ###
+Mean +- std dev: 111 ms +- 3 ms
+
+### regex_dna ###
+Mean +- std dev: 175 ms +- 13 ms
+
+### regex_effbot ###
+Mean +- std dev: 2.65 ms +- 0.31 ms
+
+### regex_v8 ###
+Mean +- std dev: 21.6 ms +- 0.3 ms
+
+### richards ###
+Mean +- std dev: 58.2 ms +- 2.1 ms
+
+### richards_super ###
+Mean +- std dev: 67.7 ms +- 1.3 ms
+
+### scimark_fft ###
+Mean +- std dev: 448 ms +- 6 ms
+
+### scimark_lu ###
+Mean +- std dev: 159 ms +- 3 ms
+
+### scimark_monte_carlo ###
+Mean +- std dev: 95.6 ms +- 2.8 ms
+
+### scimark_sor ###
+Mean +- std dev: 161 ms +- 7 ms
+
+### scimark_sparse_mat_mult ###
+Mean +- std dev: 8.91 ms +- 0.61 ms
+
+### spectral_norm ###
+Mean +- std dev: 116 ms +- 5 ms
+
+### sqlalchemy_declarative ###
+Mean +- std dev: 110 ms +- 11 ms
+
+### sqlalchemy_imperative ###
+Mean +- std dev: 12.6 ms +- 0.5 ms
+
+### sqlglot_parse ###
+Mean +- std dev: 1.56 ms +- 0.03 ms
+
+### sqlglot_transpile ###
+Mean +- std dev: 1.85 ms +- 0.10 ms
+
+### sqlglot_optimize ###
+Mean +- std dev: 48.8 ms +- 2.2 ms
+
+### sqlglot_normalize ###
+Mean +- std dev: 249 ms +- 5 ms
+
+### sqlite_synth ###
+Mean +- std dev: 3.24 us +- 0.09 us
+
+### sympy_expand ###
+Mean +- std dev: 351 ms +- 13 ms
+
+### sympy_integrate ###
+Mean +- std dev: 17.9 ms +- 1.0 ms
+
+### sympy_sum ###
+Mean +- std dev: 130 ms +- 13 ms
+
+### sympy_str ###
+Mean +- std dev: 218 ms +- 9 ms
+
+### telco ###
+Mean +- std dev: 7.59 ms +- 0.34 ms
+
+### tomli_loads ###
+Mean +- std dev: 2.01 sec +- 0.06 sec
+
+### tornado_http ###
+Mean +- std dev: 101 ms +- 6 ms
+
+### typing_runtime_protocols ###
+Mean +- std dev: 396 us +- 13 us
+
+### unpack_sequence ###
+Mean +- std dev: 38.0 ns +- 0.6 ns
+
+### unpickle ###
+Mean +- std dev: 12.0 us +- 0.2 us
+
+### unpickle_list ###
+Mean +- std dev: 5.16 us +- 0.09 us
+
+### unpickle_pure_python ###
+Mean +- std dev: 236 us +- 15 us
+
+### xml_etree_parse ###
+Mean +- std dev: 173 ms +- 4 ms
+
+### xml_etree_iterparse ###
+Mean +- std dev: 104 ms +- 2 ms
+
+### xml_etree_generate ###
+Mean +- std dev: 85.5 ms +- 2.0 ms
+
+### xml_etree_process ###
+Mean +- std dev: 66.7 ms +- 1.7 ms
+
+CONTAINER ID   IMAGE           COMMAND              CREATED             STATUS                              PORTS     NAMES
+f205e6f77428   python:3.10.2   "sh run.sh 3.10.2"   About an hour ago   Exited (0) Less than a second ago             t3.10.2
+t3.10.2
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+Deleted build cache objects:
+01sav92otglyty35d96920pyi
+nkffvkcxix3pdzey74qkv5jvc
+t586790b1dc50xe4glwdmubxx
+
+Total reclaimed space: 947B
