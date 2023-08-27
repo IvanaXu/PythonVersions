@@ -1,5 +1,5 @@
 
-basep=/Volumes/Github/PythonVersions/
+basep=/Users/ivan/PycharmProjects/PythonVersions/
 regurl=python
 ver=$1
 
