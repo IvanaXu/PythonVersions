@@ -11,8 +11,10 @@ cd /$1
 python3 -V
 pip3 -V
 
-python3 -m pip install pyperformance
+pip3 install pyperformance
+rm -rf py$version.json
 pyperformance run -o py$version.json
+
 # Try to rerun the benchmark with more runs, values and/or loops.
 # Run 'python -m pyperf system tune' command to reduce the system jitter.
 # Use pyperf stats, pyperf dump and pyperf hist to analyze results.
