@@ -6,7 +6,7 @@
 * Docker gcc library/gcc
 
 <p align="center">
-<img src="./environment/M1-ENV.png" width=300>
+<img src="./environment/ubuntu.png" width=300>
 </p>
 
 #### (3) Test Software
