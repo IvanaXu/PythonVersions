@@ -13,6 +13,7 @@ ls -l
 echo ----------------------------------------------
 echo build
 docker images
+docker rm t$ver -f
 docker rmi $regurl:$ver -f
 docker build -t $regurl:$ver .
 docker images
