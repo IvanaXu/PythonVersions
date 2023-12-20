@@ -1,9 +1,10 @@
 
-basep=/Users/ivan/PycharmProjects/PythonVersions/
+basep=/home/WUYING_ivan_139307772273599/Desktop/PythonVersions/
 regurl=python
 ver=$1
 
 cd $basep/Version
+rm -rf $1
 mkdir $1
 cd ../docker/
 ls -l
