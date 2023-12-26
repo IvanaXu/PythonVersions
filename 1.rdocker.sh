@@ -1,5 +1,5 @@
 
-basep=/home/WUYING_ivan_139307772273599/Desktop/PythonVersions/
+basep=$(pwd)
 regurl=python
 ver=$1
 
