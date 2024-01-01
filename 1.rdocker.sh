@@ -29,4 +29,4 @@ docker ps -a
 docker system prune --volumes -f
 rm -rf $basep/Version/$1/venv
 rm -rf $basep/Version/$1/dask-worker-space
-touch $basep/Version/$1/py$1.log
+# touch $basep/Version/$1/py$1.log

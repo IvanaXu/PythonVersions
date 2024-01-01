@@ -19,9 +19,9 @@ for t in TASK:
         for i in f:
             i = i.strip("\n")
             
-            if "###" in i:
+            if i.startswith("###"):
                 t1 = i.replace("###", "").replace(" ", "")
-            if "Mean" in i:
+            if i.startswith("Mean"):
                 t2 = i.replace("Mean +- std dev: ", "")
                 tdata[t1] = t2
 
