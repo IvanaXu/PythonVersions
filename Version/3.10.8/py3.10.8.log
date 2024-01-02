@@ -1,0 +1,5931 @@
+Python benchmark suite 1.10.0
+
+Creating the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /usr/local/bin/python3.10 -m venv --without-pip /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m ensurepip -v -U
+Using pip 22.2.2 from /tmp/tmpk893wx5l/pip-22.2.2-py3-none-any.whl/pip (python 3.10)
+Looking in links: /tmp/tmpk893wx5l
+Processing /tmp/tmpk893wx5l/setuptools-63.2.0-py3-none-any.whl
+Processing /tmp/tmpk893wx5l/pip-22.2.2-py3-none-any.whl
+Installing collected packages: setuptools, pip
+  changing mode of /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/pip3 to 755
+  changing mode of /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/pip3.10 to 755
+Successfully installed pip-22.2.2 setuptools-63.2.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install -U 'setuptools>=18.5' wheel
+Requirement already satisfied: setuptools>=18.5 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (63.2.0)
+Collecting setuptools>=18.5
+  Downloading setuptools-69.0.3-py3-none-any.whl (819 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.5/819.5 kB 25.5 MB/s eta 0:00:00
+Collecting wheel
+  Downloading wheel-0.42.0-py3-none-any.whl (65 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.4/65.4 kB 16.8 MB/s eta 0:00:00
+Installing collected packages: wheel, setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 63.2.0
+    Uninstalling setuptools-63.2.0:
+      Successfully uninstalled setuptools-63.2.0
+Successfully installed setuptools-69.0.3 wheel-0.42.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip --version
+pip 22.2.2 from /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages/pip (python 3.10)
+
+==================================================
+( 1/72) creating venv for benchmark (2to3)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Collecting pyperf==2.6.1
+  Downloading pyperf-2.6.1-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.7/139.7 kB 7.1 MB/s eta 0:00:00
+Collecting psutil>=5.9.0
+  Downloading psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (285 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 285.5/285.5 kB 48.8 MB/s eta 0:00:00
+Installing collected packages: psutil, pyperf
+Successfully installed psutil-5.9.7 pyperf-2.6.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 2/72) creating venv for benchmark (async_generators)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 3/72) creating venv for benchmark (async_tree)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 4/72) creating venv for benchmark (async_tree_cpu_io_mixed)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 5/72) creating venv for benchmark (async_tree_io)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 6/72) creating venv for benchmark (async_tree_memoization)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 7/72) creating venv for benchmark (asyncio_tcp)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 8/72) creating venv for benchmark (asyncio_tcp_ssl)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+
+==================================================
+( 9/72) creating venv for benchmark (asyncio_websockets)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install websockets==11.0.3 pyperf==2.6.1
+Collecting websockets==11.0.3
+  Downloading websockets-11.0.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.9/129.9 kB 7.3 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: websockets
+Successfully installed websockets-11.0.3
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(10/72) creating venv for benchmark (chameleon)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install chameleon==3.9.1 pyperf==2.6.1
+Collecting chameleon==3.9.1
+  Downloading Chameleon-3.9.1.tar.gz (93 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.9/93.9 kB 5.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Building wheels for collected packages: chameleon
+  Building wheel for chameleon (setup.py): started
+  Building wheel for chameleon (setup.py): finished with status 'done'
+  Created wheel for chameleon: filename=Chameleon-3.9.1-py2.py3-none-any.whl size=72035 sha256=eec36b4e56f163e05f9378734c23d8ba882e8e67e00d701bac6b853710127916
+  Stored in directory: /root/.cache/pip/wheels/97/df/87/4bc20fbe0a6387d057bc553d4f2a6e251fee01e406f671822d
+Successfully built chameleon
+Installing collected packages: chameleon
+Successfully installed chameleon-3.9.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(11/72) creating venv for benchmark (chaos)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(12/72) creating venv for benchmark (comprehensions)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(13/72) creating venv for benchmark (concurrent_imap)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(14/72) creating venv for benchmark (coroutines)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(15/72) creating venv for benchmark (coverage)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install coverage==7.3.2 pyperf==2.6.1
+Collecting coverage==7.3.2
+  Downloading coverage-7.3.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (227 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.5/227.5 kB 9.5 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: coverage
+Successfully installed coverage-7.3.2
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+coverage==7.3.2
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+coverage==7.3.2
+psutil==5.9.7
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(16/72) creating venv for benchmark (crypto_pyaes)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyaes==1.6.1 pyperf==2.6.1
+Collecting pyaes==1.6.1
+  Downloading pyaes-1.6.1.tar.gz (28 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Building wheels for collected packages: pyaes
+  Building wheel for pyaes (setup.py): started
+  Building wheel for pyaes (setup.py): finished with status 'done'
+  Created wheel for pyaes: filename=pyaes-1.6.1-py3-none-any.whl size=26346 sha256=354cc461893aa61989b8b3f67341fed388d78d6f4857935e70143c29bda97085
+  Stored in directory: /root/.cache/pip/wheels/d6/84/5f/ea6aef85a93c7e1922486369874f4740a5642d261e09c59140
+Successfully built pyaes
+Installing collected packages: pyaes
+Successfully installed pyaes-1.6.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+coverage==7.3.2
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+websockets==11.0.3
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+coverage==7.3.2
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+websockets==11.0.3
+
+==================================================
+(17/72) creating venv for benchmark (dask)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install 'dask[distributed]==2022.2.0' pyperf==2.6.1
+Collecting dask[distributed]==2022.2.0
+  Downloading dask-2022.2.0-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 27.3 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Collecting pyyaml>=5.3.1
+  Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.5/705.5 kB 49.7 MB/s eta 0:00:00
+Collecting packaging>=20.0
+  Downloading packaging-23.2-py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 14.5 MB/s eta 0:00:00
+Collecting toolz>=0.8.2
+  Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 14.4 MB/s eta 0:00:00
+Collecting fsspec>=0.6.0
+  Downloading fsspec-2023.12.2-py3-none-any.whl (168 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.0/169.0 kB 37.9 MB/s eta 0:00:00
+Collecting partd>=0.3.10
+  Downloading partd-1.4.1-py3-none-any.whl (18 kB)
+Collecting cloudpickle>=1.1.1
+  Downloading cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Collecting distributed==2022.02.0
+  Downloading distributed-2022.2.0-py3-none-any.whl (837 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 837.0/837.0 kB 68.5 MB/s eta 0:00:00
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Requirement already satisfied: setuptools in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from distributed==2022.02.0->dask[distributed]==2022.2.0) (69.0.3)
+Collecting jinja2
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 31.1 MB/s eta 0:00:00
+Collecting msgpack>=0.6.0
+  Downloading msgpack-1.0.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (530 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 530.8/530.8 kB 57.5 MB/s eta 0:00:00
+Collecting click>=6.6
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 26.0 MB/s eta 0:00:00
+Collecting tblib>=1.6.0
+  Downloading tblib-3.0.0-py3-none-any.whl (12 kB)
+Collecting sortedcontainers!=2.0.0,!=2.0.1
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting zict>=0.1.3
+  Downloading zict-3.0.0-py2.py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 11.3 MB/s eta 0:00:00
+Collecting tornado>=6.0.3
+  Downloading tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (435 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.4/435.4 kB 61.4 MB/s eta 0:00:00
+Collecting locket
+  Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: sortedcontainers, zict, tornado, toolz, tblib, pyyaml, packaging, msgpack, MarkupSafe, locket, fsspec, cloudpickle, click, partd, jinja2, dask, distributed
+Successfully installed MarkupSafe-2.1.3 click-8.1.7 cloudpickle-3.0.0 dask-2022.2.0 distributed-2022.2.0 fsspec-2023.12.2 jinja2-3.1.2 locket-1.0.0 msgpack-1.0.7 packaging-23.2 partd-1.4.1 pyyaml-6.0.1 sortedcontainers-2.4.0 tblib-3.0.0 toolz-0.12.0 tornado-6.4 zict-3.0.0
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(18/72) creating venv for benchmark (deepcopy)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(19/72) creating venv for benchmark (deltablue)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(20/72) creating venv for benchmark (django_template)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install asgiref==3.3.4 django==3.2.4 pytz==2021.1 sqlparse==0.4.1 pyperf==2.6.1
+Collecting asgiref==3.3.4
+  Downloading asgiref-3.3.4-py3-none-any.whl (22 kB)
+Collecting django==3.2.4
+  Downloading Django-3.2.4-py3-none-any.whl (7.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 53.9 MB/s eta 0:00:00
+Collecting pytz==2021.1
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.8/510.8 kB 65.8 MB/s eta 0:00:00
+Collecting sqlparse==0.4.1
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 kB 10.6 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: pytz, sqlparse, asgiref, django
+Successfully installed asgiref-3.3.4 django-3.2.4 pytz-2021.1 sqlparse-0.4.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(21/72) creating venv for benchmark (docutils)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install docutils==0.18.1 pyperf==2.6.1
+Collecting docutils==0.18.1
+  Downloading docutils-0.18.1-py2.py3-none-any.whl (570 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.0/570.0 kB 19.5 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: docutils
+Successfully installed docutils-0.18.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(22/72) creating venv for benchmark (dulwich_log)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install certifi==2021.5.30 dulwich==0.20.23 urllib3==1.26.5 pyperf==2.6.1
+Collecting certifi==2021.5.30
+  Downloading certifi-2021.5.30-py2.py3-none-any.whl (145 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.5/145.5 kB 5.5 MB/s eta 0:00:00
+Collecting dulwich==0.20.23
+  Downloading dulwich-0.20.23.tar.gz (414 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 414.1/414.1 kB 24.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting urllib3==1.26.5
+  Downloading urllib3-1.26.5-py2.py3-none-any.whl (138 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.1/138.1 kB 29.4 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Building wheels for collected packages: dulwich
+  Building wheel for dulwich (setup.py): started
+  Building wheel for dulwich (setup.py): finished with status 'done'
+  Created wheel for dulwich: filename=dulwich-0.20.23-cp310-cp310-linux_x86_64.whl size=513845 sha256=a9689161dce2eb2177ac858b47d713cdedac40e75aa964165cec5853c9993dbc
+  Stored in directory: /root/.cache/pip/wheels/2f/49/02/689fc9dd90271478cd385b59873b538077e1a34f89988b262e
+Successfully built dulwich
+Installing collected packages: certifi, urllib3, dulwich
+Successfully installed certifi-2021.5.30 dulwich-0.20.23 urllib3-1.26.5
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(23/72) creating venv for benchmark (fannkuch)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(24/72) creating venv for benchmark (float)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(25/72) creating venv for benchmark (gc_collect)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(26/72) creating venv for benchmark (gc_traversal)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(27/72) creating venv for benchmark (generators)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(28/72) creating venv for benchmark (genshi)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install genshi==0.7.7 six==1.16.0 pyperf==2.6.1
+Collecting genshi==0.7.7
+  Downloading Genshi-0.7.7-py3-none-any.whl (177 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.4/177.4 kB 7.4 MB/s eta 0:00:00
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: six, genshi
+Successfully installed genshi-0.7.7 six-1.16.0
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(29/72) creating venv for benchmark (go)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(30/72) creating venv for benchmark (hexiom)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(31/72) creating venv for benchmark (html5lib)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install html5lib==1.1 six==1.16.0 webencodings==0.5.1 pyperf==2.6.1
+Collecting html5lib==1.1
+  Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.2/112.2 kB 5.7 MB/s eta 0:00:00
+Requirement already satisfied: six==1.16.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (1.16.0)
+Collecting webencodings==0.5.1
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: webencodings, html5lib
+Successfully installed html5lib-1.1 webencodings-0.5.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(32/72) creating venv for benchmark (json_dumps)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(33/72) creating venv for benchmark (json_loads)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(34/72) creating venv for benchmark (logging)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+MarkupSafe==2.1.3
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(35/72) creating venv for benchmark (mako)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install mako==1.1.4 markupsafe==2.0.1 pyperf==2.6.1
+Collecting mako==1.1.4
+  Downloading Mako-1.1.4-py2.py3-none-any.whl (75 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.7/75.7 kB 4.4 MB/s eta 0:00:00
+Collecting markupsafe==2.0.1
+  Downloading MarkupSafe-2.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (30 kB)
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: markupsafe, mako
+  Attempting uninstall: markupsafe
+    Found existing installation: MarkupSafe 2.1.3
+    Uninstalling MarkupSafe-2.1.3:
+      Successfully uninstalled MarkupSafe-2.1.3
+Successfully installed mako-1.1.4 markupsafe-2.0.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(36/72) creating venv for benchmark (mdp)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(37/72) creating venv for benchmark (meteor_contest)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(38/72) creating venv for benchmark (nbody)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(39/72) creating venv for benchmark (nqueens)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(40/72) creating venv for benchmark (pathlib)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(41/72) creating venv for benchmark (pickle)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(42/72) creating venv for benchmark (pickle_dict)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(43/72) creating venv for benchmark (pickle_list)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(44/72) creating venv for benchmark (pickle_pure_python)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(45/72) creating venv for benchmark (pidigits)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(46/72) creating venv for benchmark (pprint)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(47/72) creating venv for benchmark (pyflate)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(48/72) creating venv for benchmark (python_startup)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(49/72) creating venv for benchmark (python_startup_no_site)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(50/72) creating venv for benchmark (raytrace)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(51/72) creating venv for benchmark (regex_compile)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(52/72) creating venv for benchmark (regex_dna)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(53/72) creating venv for benchmark (regex_effbot)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(54/72) creating venv for benchmark (regex_v8)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(55/72) creating venv for benchmark (richards)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(56/72) creating venv for benchmark (richards_super)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(57/72) creating venv for benchmark (scimark)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(58/72) creating venv for benchmark (spectral_norm)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(59/72) creating venv for benchmark (sqlalchemy_declarative)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install greenlet==3.0.0rc3 sqlalchemy==1.4.19 pyperf==2.6.1
+Collecting greenlet==3.0.0rc3
+  Downloading greenlet-3.0.0rc3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.0/613.0 kB 20.7 MB/s eta 0:00:00
+Collecting sqlalchemy==1.4.19
+  Downloading SQLAlchemy-1.4.19.tar.gz (7.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 59.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Building wheels for collected packages: sqlalchemy
+  Building wheel for sqlalchemy (setup.py): started
+  Building wheel for sqlalchemy (setup.py): finished with status 'done'
+  Created wheel for sqlalchemy: filename=SQLAlchemy-1.4.19-cp310-cp310-linux_x86_64.whl size=1530442 sha256=de2a2c64802bc0cbc9871c7b9aa5b784239086d88b478ceb34a9fe6a36b88c63
+  Stored in directory: /root/.cache/pip/wheels/54/10/0f/d8c64de866e9f933be5158fb6785158a8ba1c7e5fd5e0d39ca
+Successfully built sqlalchemy
+Installing collected packages: greenlet, sqlalchemy
+Successfully installed greenlet-3.0.0rc3 sqlalchemy-1.4.19
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(60/72) creating venv for benchmark (sqlalchemy_imperative)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install greenlet==3.0.0rc3 sqlalchemy==1.4.19 pyperf==2.6.1
+Requirement already satisfied: greenlet==3.0.0rc3 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (3.0.0rc3)
+Requirement already satisfied: sqlalchemy==1.4.19 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (1.4.19)
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(61/72) creating venv for benchmark (sqlglot)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install sqlglot==4.6.0 pyperf==2.6.1
+Collecting sqlglot==4.6.0
+  Downloading sqlglot-4.6.0-py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 4.5 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: sqlglot
+Successfully installed sqlglot-4.6.0
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(62/72) creating venv for benchmark (sqlite_synth)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(63/72) creating venv for benchmark (sympy)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install mpmath==1.2.1 sympy==1.8 pyperf==2.6.1
+Collecting mpmath==1.2.1
+  Downloading mpmath-1.2.1-py3-none-any.whl (532 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 532.6/532.6 kB 12.9 MB/s eta 0:00:00
+Collecting sympy==1.8
+  Downloading sympy-1.8-py3-none-any.whl (6.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 44.2 MB/s eta 0:00:00
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: mpmath, sympy
+Successfully installed mpmath-1.2.1 sympy-1.8
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(64/72) creating venv for benchmark (telco)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(65/72) creating venv for benchmark (tomli_loads)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install tomli==2.0.1 pyperf==2.6.1
+Collecting tomli==2.0.1
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing collected packages: tomli
+Successfully installed tomli-2.0.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.4
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(66/72) creating venv for benchmark (tornado_http)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install tornado==6.1 pyperf==2.6.1
+Collecting tornado==6.1
+  Downloading tornado-6.1.tar.gz (497 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 497.4/497.4 kB 18.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Building wheels for collected packages: tornado
+  Building wheel for tornado (setup.py): started
+  Building wheel for tornado (setup.py): finished with status 'done'
+  Created wheel for tornado: filename=tornado-6.1-cp310-cp310-linux_x86_64.whl size=421671 sha256=1767f2faf41eba34c4bc8872bc8db5ccec1ee4cafbfb59292048f3ab80138d53
+  Stored in directory: /root/.cache/pip/wheels/80/32/8d/21cf0fa6ee4e083f6530e5b83dfdfa9489a3890d320803f4c7
+Successfully built tornado
+Installing collected packages: tornado
+  Attempting uninstall: tornado
+    Found existing installation: tornado 6.4
+    Uninstalling tornado-6.4:
+      Successfully uninstalled tornado-6.4
+Successfully installed tornado-6.1
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(67/72) creating venv for benchmark (typing_runtime_protocols)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(68/72) creating venv for benchmark (unpack_sequence)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(69/72) creating venv for benchmark (unpickle)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(70/72) creating venv for benchmark (unpickle_list)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(71/72) creating venv for benchmark (unpickle_pure_python)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+==================================================
+(72/72) creating venv for benchmark (xml_etree)
+
+(trying common venv first)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install pyperf==2.6.1
+Requirement already satisfied: pyperf==2.6.1 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: psutil>=5.9.0 in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (from pyperf==2.6.1) (5.9.7)
+Installing requirements into the virtual environment /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip install psutil
+Requirement already satisfied: psutil in ./venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/lib/python3.10/site-packages (5.9.7)
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -m pip freeze
+asgiref==3.3.4
+certifi==2021.5.30
+Chameleon==3.9.1
+click==8.1.7
+cloudpickle==3.0.0
+coverage==7.3.2
+dask==2022.2.0
+distributed==2022.2.0
+Django==3.2.4
+docutils==0.18.1
+dulwich==0.20.23
+fsspec==2023.12.2
+Genshi==0.7.7
+greenlet==3.0.0rc3
+html5lib==1.1
+Jinja2==3.1.2
+locket==1.0.0
+Mako==1.1.4
+MarkupSafe==2.0.1
+mpmath==1.2.1
+msgpack==1.0.7
+packaging==23.2
+partd==1.4.1
+psutil==5.9.7
+pyaes==1.6.1
+pyperf==2.6.1
+pytz==2021.1
+PyYAML==6.0.1
+six==1.16.0
+sortedcontainers==2.4.0
+SQLAlchemy==1.4.19
+sqlglot==4.6.0
+sqlparse==0.4.1
+sympy==1.8
+tblib==3.0.0
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.1
+urllib3==1.26.5
+webencodings==0.5.1
+websockets==11.0.3
+zict==3.0.0
+
+[ 1/72] 2to3...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_2to3/run_benchmark.py --output /tmp/tmp0wgyp5x9 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+2to3: Mean +- std dev: 467 ms +- 3 ms
+[ 2/72] async_generators...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_async_generators/run_benchmark.py --output /tmp/tmp92bilu9o --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_generators: Mean +- std dev: 525 ms +- 5 ms
+[ 3/72] async_tree...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py none --output /tmp/tmpc4h9lb45 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_none: Mean +- std dev: 975 ms +- 46 ms
+[ 4/72] async_tree_cpu_io_mixed...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py cpu_io_mixed --output /tmp/tmprs3i7cj_ --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_cpu_io_mixed: Mean +- std dev: 1.37 sec +- 0.04 sec
+[ 5/72] async_tree_io...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py io --output /tmp/tmpijb05mqw --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_io: Mean +- std dev: 2.35 sec +- 0.03 sec
+[ 6/72] async_tree_memoization...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py memoization --output /tmp/tmphod0pedf --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_memoization: Mean +- std dev: 1.14 sec +- 0.02 sec
+[ 7/72] asyncio_tcp...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_tcp/run_benchmark.py --output /tmp/tmpwbakzmc0 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+asyncio_tcp: Mean +- std dev: 1.20 sec +- 0.01 sec
+[ 8/72] asyncio_tcp_ssl...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_tcp/run_benchmark.py --ssl --output /tmp/tmpdz8_0eqm --inherit-environ PYPERFORMANCE_RUNID
+.....................
+WARNING: the benchmark result may be unstable
+* the standard deviation (723 ms) is 18% of the mean (3.99 sec)
+
+Try to rerun the benchmark with more runs, values and/or loops.
+Run 'python -m pyperf system tune' command to reduce the system jitter.
+Use pyperf stats, pyperf dump and pyperf hist to analyze results.
+Use --quiet option to hide these warnings.
+
+asyncio_tcp_ssl: Mean +- std dev: 3.99 sec +- 0.72 sec
+[ 9/72] asyncio_websockets...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_websockets/run_benchmark.py --output /tmp/tmpj6hz2enq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+asyncio_websockets: Mean +- std dev: 659 ms +- 5 ms
+[10/72] chameleon...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_chameleon/run_benchmark.py --output /tmp/tmpgif0qf79 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+chameleon: Mean +- std dev: 12.6 ms +- 0.2 ms
+[11/72] chaos...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_chaos/run_benchmark.py --output /tmp/tmppy5i13hv --inherit-environ PYPERFORMANCE_RUNID
+.....................
+chaos: Mean +- std dev: 149 ms +- 2 ms
+[12/72] comprehensions...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_comprehensions/run_benchmark.py --output /tmp/tmp2fdp2h7e --inherit-environ PYPERFORMANCE_RUNID
+.....................
+comprehensions: Mean +- std dev: 37.9 us +- 0.3 us
+[13/72] concurrent_imap...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_concurrent_imap/run_benchmark.py --output /tmp/tmpwmoa92qj --inherit-environ PYPERFORMANCE_RUNID
+.....................
+bench_mp_pool: Mean +- std dev: 19.0 ms +- 1.1 ms
+.....................
+bench_thread_pool: Mean +- std dev: 1.56 ms +- 0.01 ms
+[14/72] coroutines...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_coroutines/run_benchmark.py --output /tmp/tmp_acjdcev --inherit-environ PYPERFORMANCE_RUNID
+.....................
+coroutines: Mean +- std dev: 43.0 ms +- 0.5 ms
+[15/72] coverage...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_coverage/run_benchmark.py --output /tmp/tmpbb52ncfn --inherit-environ PYPERFORMANCE_RUNID
+.....................
+coverage: Mean +- std dev: 68.8 ms +- 0.4 ms
+[16/72] crypto_pyaes...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_crypto_pyaes/run_benchmark.py --output /tmp/tmp4xlrhsw_ --inherit-environ PYPERFORMANCE_RUNID
+.....................
+crypto_pyaes: Mean +- std dev: 160 ms +- 2 ms
+[17/72] dask...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_dask/run_benchmark.py --output /tmp/tmpkj424ua_ --inherit-environ PYPERFORMANCE_RUNID
+.....................
+dask: Mean +- std dev: 839 ms +- 12 ms
+[18/72] deepcopy...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_deepcopy/run_benchmark.py --output /tmp/tmp08lu6td4 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+deepcopy: Mean +- std dev: 625 us +- 5 us
+.....................
+deepcopy_reduce: Mean +- std dev: 5.59 us +- 0.07 us
+.....................
+deepcopy_memo: Mean +- std dev: 71.5 us +- 0.7 us
+[19/72] deltablue...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_deltablue/run_benchmark.py --output /tmp/tmpa5djqot5 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+deltablue: Mean +- std dev: 12.1 ms +- 0.2 ms
+[20/72] django_template...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_django_template/run_benchmark.py --output /tmp/tmp90ypb1bp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+django_template: Mean +- std dev: 71.4 ms +- 0.7 ms
+[21/72] docutils...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_docutils/run_benchmark.py --output /tmp/tmpi6cb7jru --inherit-environ PYPERFORMANCE_RUNID
+.....................
+docutils: Mean +- std dev: 4.18 sec +- 0.02 sec
+[22/72] dulwich_log...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_dulwich_log/run_benchmark.py --output /tmp/tmpx37euke6 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+dulwich_log: Mean +- std dev: 110 ms +- 1 ms
+[23/72] fannkuch...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_fannkuch/run_benchmark.py --output /tmp/tmp6teyexqk --inherit-environ PYPERFORMANCE_RUNID
+.....................
+fannkuch: Mean +- std dev: 618 ms +- 4 ms
+[24/72] float...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_float/run_benchmark.py --output /tmp/tmptnizm8wq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+float: Mean +- std dev: 150 ms +- 2 ms
+[25/72] gc_collect...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_gc_collect/run_benchmark.py --output /tmp/tmpt0hgfdxy --inherit-environ PYPERFORMANCE_RUNID
+.....................
+create_gc_cycles: Mean +- std dev: 1.90 ms +- 0.01 ms
+[26/72] gc_traversal...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_gc_traversal/run_benchmark.py --output /tmp/tmp5ygu1mae --inherit-environ PYPERFORMANCE_RUNID
+.....................
+gc_traversal: Mean +- std dev: 4.01 ms +- 0.01 ms
+[27/72] generators...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_generators/run_benchmark.py --output /tmp/tmpk7qzc4tk --inherit-environ PYPERFORMANCE_RUNID
+.....................
+generators: Mean +- std dev: 79.4 ms +- 0.6 ms
+[28/72] genshi...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_genshi/run_benchmark.py --output /tmp/tmpudfz4nqz --inherit-environ PYPERFORMANCE_RUNID
+.....................
+genshi_text: Mean +- std dev: 42.0 ms +- 0.3 ms
+.....................
+genshi_xml: Mean +- std dev: 86.0 ms +- 1.4 ms
+[29/72] go...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py --output /tmp/tmpaxvzbf63 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+go: Mean +- std dev: 320 ms +- 3 ms
+[30/72] hexiom...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_hexiom/run_benchmark.py --output /tmp/tmpo2e37nyt --inherit-environ PYPERFORMANCE_RUNID
+.....................
+hexiom: Mean +- std dev: 13.4 ms +- 0.1 ms
+[31/72] html5lib...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_html5lib/run_benchmark.py --output /tmp/tmpuzvsa31x --inherit-environ PYPERFORMANCE_RUNID
+.....................
+html5lib: Mean +- std dev: 114 ms +- 6 ms
+[32/72] json_dumps...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_json_dumps/run_benchmark.py --output /tmp/tmpevxkz47j --inherit-environ PYPERFORMANCE_RUNID
+.....................
+json_dumps: Mean +- std dev: 17.6 ms +- 0.2 ms
+[33/72] json_loads...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_json_loads/run_benchmark.py --output /tmp/tmp0prnqnmq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+json_loads: Mean +- std dev: 33.4 us +- 0.5 us
+[34/72] logging...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_logging/run_benchmark.py --output /tmp/tmpodqc6byx --inherit-environ PYPERFORMANCE_RUNID
+.....................
+logging_format: Mean +- std dev: 14.4 us +- 0.2 us
+.....................
+logging_silent: Mean +- std dev: 259 ns +- 7 ns
+.....................
+logging_simple: Mean +- std dev: 13.3 us +- 0.1 us
+[35/72] mako...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_mako/run_benchmark.py --output /tmp/tmphv0bu3me --inherit-environ PYPERFORMANCE_RUNID
+.....................
+mako: Mean +- std dev: 22.0 ms +- 0.2 ms
+[36/72] mdp...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_mdp/run_benchmark.py --output /tmp/tmp_l0tvrmq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+mdp: Mean +- std dev: 4.03 sec +- 0.02 sec
+[37/72] meteor_contest...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_meteor_contest/run_benchmark.py --output /tmp/tmp8xp6x1ld --inherit-environ PYPERFORMANCE_RUNID
+.....................
+meteor_contest: Mean +- std dev: 142 ms +- 1 ms
+[38/72] nbody...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_nbody/run_benchmark.py --output /tmp/tmpga8hr4r8 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+nbody: Mean +- std dev: 186 ms +- 1 ms
+[39/72] nqueens...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_nqueens/run_benchmark.py --output /tmp/tmpjax90ygo --inherit-environ PYPERFORMANCE_RUNID
+.....................
+nqueens: Mean +- std dev: 137 ms +- 1 ms
+[40/72] pathlib...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pathlib/run_benchmark.py --output /tmp/tmp85vxuyp7 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pathlib: Mean +- std dev: 34.0 ms +- 0.5 ms
+[41/72] pickle...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle --output /tmp/tmptxznqntk --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle: Mean +- std dev: 13.8 us +- 0.2 us
+[42/72] pickle_dict...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle_dict --output /tmp/tmpafylglrm --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_dict: Mean +- std dev: 34.7 us +- 0.3 us
+[43/72] pickle_list...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle_list --output /tmp/tmp5a4xoa1h --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_list: Mean +- std dev: 5.57 us +- 0.09 us
+[44/72] pickle_pure_python...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py --pure-python pickle --output /tmp/tmpdff18gbm --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_pure_python: Mean +- std dev: 664 us +- 12 us
+[45/72] pidigits...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pidigits/run_benchmark.py --output /tmp/tmpdcoiq335 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pidigits: Mean +- std dev: 241 ms +- 1 ms
+[46/72] pprint...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pprint/run_benchmark.py --output /tmp/tmpp_0l4eqj --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pprint_safe_repr: Mean +- std dev: 1.39 sec +- 0.02 sec
+.....................
+pprint_pformat: Mean +- std dev: 2.84 sec +- 0.02 sec
+[47/72] pyflate...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pyflate/run_benchmark.py --output /tmp/tmpdvxwgj_w --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pyflate: Mean +- std dev: 939 ms +- 10 ms
+[48/72] python_startup...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_python_startup/run_benchmark.py --output /tmp/tmpbxyqsw93 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+python_startup: Mean +- std dev: 12.5 ms +- 0.2 ms
+[49/72] python_startup_no_site...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_python_startup/run_benchmark.py --no-site --output /tmp/tmp6i8784hp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+python_startup_no_site: Mean +- std dev: 7.90 ms +- 0.13 ms
+[50/72] raytrace...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_raytrace/run_benchmark.py --output /tmp/tmpepkv5ncg --inherit-environ PYPERFORMANCE_RUNID
+.....................
+raytrace: Mean +- std dev: 729 ms +- 5 ms
+[51/72] regex_compile...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_regex_compile/run_benchmark.py --output /tmp/tmpi_j12ozr --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_compile: Mean +- std dev: 239 ms +- 2 ms
+[52/72] regex_dna...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_regex_dna/run_benchmark.py --output /tmp/tmpf3u1umra --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_dna: Mean +- std dev: 216 ms +- 2 ms
+[53/72] regex_effbot...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_regex_effbot/run_benchmark.py --output /tmp/tmpqxzbm85j --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_effbot: Mean +- std dev: 3.50 ms +- 0.05 ms
+[54/72] regex_v8...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_regex_v8/run_benchmark.py --output /tmp/tmpuuqzf0ci --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_v8: Mean +- std dev: 29.5 ms +- 0.4 ms
+[55/72] richards...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_richards/run_benchmark.py --output /tmp/tmp15libpcp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+richards: Mean +- std dev: 118 ms +- 2 ms
+[56/72] richards_super...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_richards_super/run_benchmark.py --output /tmp/tmp204_l8hg --inherit-environ PYPERFORMANCE_RUNID
+.....................
+richards_super: Mean +- std dev: 141 ms +- 2 ms
+[57/72] scimark...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_scimark/run_benchmark.py --output /tmp/tmp93nbnjt4 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+scimark_fft: Mean +- std dev: 530 ms +- 5 ms
+.....................
+scimark_lu: Mean +- std dev: 227 ms +- 2 ms
+.....................
+scimark_monte_carlo: Mean +- std dev: 142 ms +- 3 ms
+.....................
+scimark_sor: Mean +- std dev: 278 ms +- 3 ms
+.....................
+scimark_sparse_mat_mult: Mean +- std dev: 6.47 ms +- 0.10 ms
+[58/72] spectral_norm...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_spectral_norm/run_benchmark.py --output /tmp/tmpjula0v9i --inherit-environ PYPERFORMANCE_RUNID
+.....................
+spectral_norm: Mean +- std dev: 199 ms +- 2 ms
+[59/72] sqlalchemy_declarative...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_sqlalchemy_declarative/run_benchmark.py --output /tmp/tmpv4wsqtwx --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlalchemy_declarative: Mean +- std dev: 221 ms +- 6 ms
+[60/72] sqlalchemy_imperative...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_sqlalchemy_imperative/run_benchmark.py --output /tmp/tmpg0p32ydg --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlalchemy_imperative: Mean +- std dev: 31.3 ms +- 1.4 ms
+[61/72] sqlglot...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_sqlglot/run_benchmark.py --output /tmp/tmpn1lesagd --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlglot_parse: Mean +- std dev: 3.00 ms +- 0.04 ms
+.....................
+sqlglot_transpile: Mean +- std dev: 3.51 ms +- 0.03 ms
+.....................
+sqlglot_optimize: Mean +- std dev: 96.7 ms +- 0.6 ms
+.....................
+sqlglot_normalize: Mean +- std dev: 204 ms +- 1 ms
+[62/72] sqlite_synth...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_sqlite_synth/run_benchmark.py --output /tmp/tmpza82r1ar --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlite_synth: Mean +- std dev: 3.89 us +- 0.11 us
+[63/72] sympy...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_sympy/run_benchmark.py --output /tmp/tmps7_f75ps --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sympy_expand: Mean +- std dev: 749 ms +- 4 ms
+.....................
+sympy_integrate: Mean +- std dev: 33.1 ms +- 0.3 ms
+.....................
+sympy_sum: Mean +- std dev: 260 ms +- 3 ms
+.....................
+sympy_str: Mean +- std dev: 454 ms +- 3 ms
+[64/72] telco...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_telco/run_benchmark.py --output /tmp/tmpt5p4v8wd --inherit-environ PYPERFORMANCE_RUNID
+.....................
+telco: Mean +- std dev: 8.85 ms +- 0.23 ms
+[65/72] tomli_loads...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_tomli_loads/run_benchmark.py --output /tmp/tmp_9zzytb3 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+tomli_loads: Mean +- std dev: 3.87 sec +- 0.05 sec
+[66/72] tornado_http...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_tornado_http/run_benchmark.py --output /tmp/tmp70_e34i7 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+tornado_http: Mean +- std dev: 204 ms +- 6 ms
+[67/72] typing_runtime_protocols...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_typing_runtime_protocols/run_benchmark.py --output /tmp/tmpqqcqzklh --inherit-environ PYPERFORMANCE_RUNID
+.....................
+typing_runtime_protocols: Mean +- std dev: 732 us +- 9 us
+[68/72] unpack_sequence...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_unpack_sequence/run_benchmark.py --output /tmp/tmpnbvui_wl --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpack_sequence: Mean +- std dev: 71.3 ns +- 0.8 ns
+[69/72] unpickle...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py unpickle --output /tmp/tmp6dxhd2v1 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle: Mean +- std dev: 18.8 us +- 0.2 us
+[70/72] unpickle_list...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py unpickle_list --output /tmp/tmpqysv77oq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle_list: Mean +- std dev: 6.63 us +- 0.07 us
+[71/72] unpickle_pure_python...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py --pure-python unpickle --output /tmp/tmpmzh5rnpd --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle_pure_python: Mean +- std dev: 442 us +- 4 us
+[72/72] xml_etree...
+# /3.10.8/venv/cpython3.10-8ad37b816aeb-compat-2d3356be745c/bin/python -u /usr/local/lib/python3.10/site-packages/pyperformance/data-files/benchmarks/bm_xml_etree/run_benchmark.py --output /tmp/tmpioay9668 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+xml_etree_parse: Mean +- std dev: 202 ms +- 3 ms
+.....................
+xml_etree_iterparse: Mean +- std dev: 141 ms +- 2 ms
+.....................
+xml_etree_generate: Mean +- std dev: 130 ms +- 2 ms
+.....................
+xml_etree_process: Mean +- std dev: 105 ms +- 2 ms
+
+Performance version: 1.10.0
+Report on Linux-5.15.0-88-generic-x86_64-with-glibc2.36
+Number of logical CPUs: 2
+Start date: 2024-01-02 20:36:22.675746
+End date: 2024-01-02 21:46:27.940683
+
+### 2to3 ###
+Mean +- std dev: 467 ms +- 3 ms
+
+### async_generators ###
+Mean +- std dev: 525 ms +- 5 ms
+
+### async_tree_none ###
+Mean +- std dev: 975 ms +- 46 ms
+
+### async_tree_cpu_io_mixed ###
+Mean +- std dev: 1.37 sec +- 0.04 sec
+
+### async_tree_io ###
+Mean +- std dev: 2.35 sec +- 0.03 sec
+
+### async_tree_memoization ###
+Mean +- std dev: 1.14 sec +- 0.02 sec
+
+### asyncio_tcp ###
+Mean +- std dev: 1.20 sec +- 0.01 sec
+
+### asyncio_tcp_ssl ###
+Mean +- std dev: 3.99 sec +- 0.72 sec
+
+### asyncio_websockets ###
+Mean +- std dev: 659 ms +- 5 ms
+
+### chameleon ###
+Mean +- std dev: 12.6 ms +- 0.2 ms
+
+### chaos ###
+Mean +- std dev: 149 ms +- 2 ms
+
+### comprehensions ###
+Mean +- std dev: 37.9 us +- 0.3 us
+
+### bench_mp_pool ###
+Mean +- std dev: 19.0 ms +- 1.1 ms
+
+### bench_thread_pool ###
+Mean +- std dev: 1.56 ms +- 0.01 ms
+
+### coroutines ###
+Mean +- std dev: 43.0 ms +- 0.5 ms
+
+### coverage ###
+Mean +- std dev: 68.8 ms +- 0.4 ms
+
+### crypto_pyaes ###
+Mean +- std dev: 160 ms +- 2 ms
+
+### dask ###
+Mean +- std dev: 839 ms +- 12 ms
+
+### deepcopy ###
+Mean +- std dev: 625 us +- 5 us
+
+### deepcopy_reduce ###
+Mean +- std dev: 5.59 us +- 0.07 us
+
+### deepcopy_memo ###
+Mean +- std dev: 71.5 us +- 0.7 us
+
+### deltablue ###
+Mean +- std dev: 12.1 ms +- 0.2 ms
+
+### django_template ###
+Mean +- std dev: 71.4 ms +- 0.7 ms
+
+### docutils ###
+Mean +- std dev: 4.18 sec +- 0.02 sec
+
+### dulwich_log ###
+Mean +- std dev: 110 ms +- 1 ms
+
+### fannkuch ###
+Mean +- std dev: 618 ms +- 4 ms
+
+### float ###
+Mean +- std dev: 150 ms +- 2 ms
+
+### create_gc_cycles ###
+Mean +- std dev: 1.90 ms +- 0.01 ms
+
+### gc_traversal ###
+Mean +- std dev: 4.01 ms +- 0.01 ms
+
+### generators ###
+Mean +- std dev: 79.4 ms +- 0.6 ms
+
+### genshi_text ###
+Mean +- std dev: 42.0 ms +- 0.3 ms
+
+### genshi_xml ###
+Mean +- std dev: 86.0 ms +- 1.4 ms
+
+### go ###
+Mean +- std dev: 320 ms +- 3 ms
+
+### hexiom ###
+Mean +- std dev: 13.4 ms +- 0.1 ms
+
+### html5lib ###
+Mean +- std dev: 114 ms +- 6 ms
+
+### json_dumps ###
+Mean +- std dev: 17.6 ms +- 0.2 ms
+
+### json_loads ###
+Mean +- std dev: 33.4 us +- 0.5 us
+
+### logging_format ###
+Mean +- std dev: 14.4 us +- 0.2 us
+
+### logging_silent ###
+Mean +- std dev: 259 ns +- 7 ns
+
+### logging_simple ###
+Mean +- std dev: 13.3 us +- 0.1 us
+
+### mako ###
+Mean +- std dev: 22.0 ms +- 0.2 ms
+
+### mdp ###
+Mean +- std dev: 4.03 sec +- 0.02 sec
+
+### meteor_contest ###
+Mean +- std dev: 142 ms +- 1 ms
+
+### nbody ###
+Mean +- std dev: 186 ms +- 1 ms
+
+### nqueens ###
+Mean +- std dev: 137 ms +- 1 ms
+
+### pathlib ###
+Mean +- std dev: 34.0 ms +- 0.5 ms
+
+### pickle ###
+Mean +- std dev: 13.8 us +- 0.2 us
+
+### pickle_dict ###
+Mean +- std dev: 34.7 us +- 0.3 us
+
+### pickle_list ###
+Mean +- std dev: 5.57 us +- 0.09 us
+
+### pickle_pure_python ###
+Mean +- std dev: 664 us +- 12 us
+
+### pidigits ###
+Mean +- std dev: 241 ms +- 1 ms
+
+### pprint_safe_repr ###
+Mean +- std dev: 1.39 sec +- 0.02 sec
+
+### pprint_pformat ###
+Mean +- std dev: 2.84 sec +- 0.02 sec
+
+### pyflate ###
+Mean +- std dev: 939 ms +- 10 ms
+
+### python_startup ###
+Mean +- std dev: 12.5 ms +- 0.2 ms
+
+### python_startup_no_site ###
+Mean +- std dev: 7.90 ms +- 0.13 ms
+
+### raytrace ###
+Mean +- std dev: 729 ms +- 5 ms
+
+### regex_compile ###
+Mean +- std dev: 239 ms +- 2 ms
+
+### regex_dna ###
+Mean +- std dev: 216 ms +- 2 ms
+
+### regex_effbot ###
+Mean +- std dev: 3.50 ms +- 0.05 ms
+
+### regex_v8 ###
+Mean +- std dev: 29.5 ms +- 0.4 ms
+
+### richards ###
+Mean +- std dev: 118 ms +- 2 ms
+
+### richards_super ###
+Mean +- std dev: 141 ms +- 2 ms
+
+### scimark_fft ###
+Mean +- std dev: 530 ms +- 5 ms
+
+### scimark_lu ###
+Mean +- std dev: 227 ms +- 2 ms
+
+### scimark_monte_carlo ###
+Mean +- std dev: 142 ms +- 3 ms
+
+### scimark_sor ###
+Mean +- std dev: 278 ms +- 3 ms
+
+### scimark_sparse_mat_mult ###
+Mean +- std dev: 6.47 ms +- 0.10 ms
+
+### spectral_norm ###
+Mean +- std dev: 199 ms +- 2 ms
+
+### sqlalchemy_declarative ###
+Mean +- std dev: 221 ms +- 6 ms
+
+### sqlalchemy_imperative ###
+Mean +- std dev: 31.3 ms +- 1.4 ms
+
+### sqlglot_parse ###
+Mean +- std dev: 3.00 ms +- 0.04 ms
+
+### sqlglot_transpile ###
+Mean +- std dev: 3.51 ms +- 0.03 ms
+
+### sqlglot_optimize ###
+Mean +- std dev: 96.7 ms +- 0.6 ms
+
+### sqlglot_normalize ###
+Mean +- std dev: 204 ms +- 1 ms
+
+### sqlite_synth ###
+Mean +- std dev: 3.89 us +- 0.11 us
+
+### sympy_expand ###
+Mean +- std dev: 749 ms +- 4 ms
+
+### sympy_integrate ###
+Mean +- std dev: 33.1 ms +- 0.3 ms
+
+### sympy_sum ###
+Mean +- std dev: 260 ms +- 3 ms
+
+### sympy_str ###
+Mean +- std dev: 454 ms +- 3 ms
+
+### telco ###
+Mean +- std dev: 8.85 ms +- 0.23 ms
+
+### tomli_loads ###
+Mean +- std dev: 3.87 sec +- 0.05 sec
+
+### tornado_http ###
+Mean +- std dev: 204 ms +- 6 ms
+
+### typing_runtime_protocols ###
+Mean +- std dev: 732 us +- 9 us
+
+### unpack_sequence ###
+Mean +- std dev: 71.3 ns +- 0.8 ns
+
+### unpickle ###
+Mean +- std dev: 18.8 us +- 0.2 us
+
+### unpickle_list ###
+Mean +- std dev: 6.63 us +- 0.07 us
+
+### unpickle_pure_python ###
+Mean +- std dev: 442 us +- 4 us
+
+### xml_etree_parse ###
+Mean +- std dev: 202 ms +- 3 ms
+
+### xml_etree_iterparse ###
+Mean +- std dev: 141 ms +- 2 ms
+
+### xml_etree_generate ###
+Mean +- std dev: 130 ms +- 2 ms
+
+### xml_etree_process ###
+Mean +- std dev: 105 ms +- 2 ms
+
