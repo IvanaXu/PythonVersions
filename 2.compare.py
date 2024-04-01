@@ -84,6 +84,16 @@ FIRST = """
 * [Pyperformance](https://github.com/python/pyperformance)
 
 """
+END = """
+<div align=center>
+
+[![IvanaXu/PythonVersions](https://gitee.com/IvanaXu/PythonVersions/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/IvanaXu/PythonVersions)
+
+https://github.com/IvanaXu/PythonVersions
+
+</div>
+"""
+
 
 with open("README.md", "w") as f:
     f.write(FIRST)
@@ -120,6 +130,8 @@ with open("README.md", "w") as f:
     for i in cdata.fillna("/").to_markdown():
         f.write(i)
     f.write("\n\n")
+
+    f.write(END)
 
 
 
