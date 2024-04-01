@@ -22,7 +22,7 @@ for ver in tqdm([
     # '3.8.16', 
     # '3.8.17', 
     # '3.8.18', 
-    '3.8.19',
+    # '3.8.19',
 
     # '3.9.0', 
     # '3.9.1', 
@@ -43,7 +43,7 @@ for ver in tqdm([
     # '3.9.16', 
     # '3.9.17', 
     # '3.9.18', 
-    # '3.9.19', 
+    '3.9.19', 
 
     # '3.10.0', 
     # '3.10.1', 
@@ -59,7 +59,7 @@ for ver in tqdm([
     # '3.10.11', 
     # '3.10.12', 
     # '3.10.13',
-    # "3.10.14",
+    "3.10.14",
 
     # '3.11.0', 
     # '3.11.1', 
@@ -74,6 +74,7 @@ for ver in tqdm([
     # '3.12.1',
 ]):
     print(f"\n\n\n\n{'-'*100}\n{ver} WAIT...")
-    # time.sleep(60)
-    # os.system(f"""time sh 1.rdocker.sh {ver}""")
+    time.sleep(10)
+    os.system(f"""time sh 1.rdocker.sh {ver}""")
     os.system(f"""python3 2.compare.py && git add * && git commit -m "#28 {ver}" && git push""")
+#
