@@ -4,7 +4,7 @@
 > https://www.python.org/downloads/
 #### (2) Running Environment
 * Docker gcc library/gcc
-> ecs.u1-c1m2.large/aliyun Intel(R) Xeon(R) Platinum 2核(vCPU) 4 GiB Ubuntu 22.04 64位
+> ecs.u1-c1m2.large/aliyun Intel(R) Xeon(R) Platinum 2核(vCPU) 4 GiB Ubuntu 22.04 64位 德国（法兰克福）
 
 #### (3) Test Software
 * [Pyperformance](https://github.com/python/pyperformance)
