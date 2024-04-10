@@ -6357,4 +6357,667 @@ async_tree_eager_io_tg: Mean +- std dev: 1.54 sec +- 0.05 sec
 async_tree_eager_memoization: Mean +- std dev: 338 ms +- 33 ms
 [12/87] async_tree_eager_memoization_tg...
 # /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py eager_memoization --task-groups --output /tmp/tmpe2p79kxh --inherit-environ PYPERFORMANCE_RUNID
-.
+.....................
+async_tree_eager_memoization_tg: Mean +- std dev: 253 ms +- 14 ms
+[13/87] async_tree_eager_tg...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py eager --task-groups --output /tmp/tmpzagyokt6 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_eager_tg: Mean +- std dev: 96.8 ms +- 2.3 ms
+[14/87] async_tree_io...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py io --output /tmp/tmpuyddf3u4 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+WARNING: the benchmark result may be unstable
+* the standard deviation (178 ms) is 12% of the mean (1.48 sec)
+* the maximum (2.25 sec) is 52% greater than the mean (1.48 sec)
+
+Try to rerun the benchmark with more runs, values and/or loops.
+Run 'python -m pyperf system tune' command to reduce the system jitter.
+Use pyperf stats, pyperf dump and pyperf hist to analyze results.
+Use --quiet option to hide these warnings.
+
+async_tree_io: Mean +- std dev: 1.48 sec +- 0.18 sec
+[15/87] async_tree_io_tg...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py io --task-groups --output /tmp/tmplymmw0yj --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_io_tg: Mean +- std dev: 1.47 sec +- 0.03 sec
+[16/87] async_tree_memoization...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py memoization --output /tmp/tmp_maxbmpy --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_memoization: Mean +- std dev: 732 ms +- 34 ms
+[17/87] async_tree_memoization_tg...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py memoization --task-groups --output /tmp/tmp8bv_tvl4 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_memoization_tg: Mean +- std dev: 732 ms +- 45 ms
+[18/87] async_tree_tg...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_async_tree/run_benchmark.py none --task-groups --output /tmp/tmpec80jvts --inherit-environ PYPERFORMANCE_RUNID
+.....................
+async_tree_none_tg: Mean +- std dev: 554 ms +- 11 ms
+[19/87] asyncio_tcp...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_tcp/run_benchmark.py --output /tmp/tmpolnuxzts --inherit-environ PYPERFORMANCE_RUNID
+.....................
+asyncio_tcp: Mean +- std dev: 670 ms +- 31 ms
+[20/87] asyncio_tcp_ssl...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_tcp/run_benchmark.py --ssl --output /tmp/tmp2gat94di --inherit-environ PYPERFORMANCE_RUNID
+.....................
+asyncio_tcp_ssl: Mean +- std dev: 2.41 sec +- 0.04 sec
+[21/87] asyncio_websockets...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_asyncio_websockets/run_benchmark.py --output /tmp/tmpo_lyadp2 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+asyncio_websockets: Mean +- std dev: 648 ms +- 6 ms
+[22/87] chameleon...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_chameleon/run_benchmark.py --output /tmp/tmpsxapyuql --inherit-environ PYPERFORMANCE_RUNID
+.....................
+chameleon: Mean +- std dev: 8.82 ms +- 0.38 ms
+[23/87] chaos...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_chaos/run_benchmark.py --output /tmp/tmpeyqc1_ty --inherit-environ PYPERFORMANCE_RUNID
+.....................
+chaos: Mean +- std dev: 83.4 ms +- 2.3 ms
+[24/87] comprehensions...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_comprehensions/run_benchmark.py --output /tmp/tmp87zp6y92 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+comprehensions: Mean +- std dev: 20.7 us +- 0.5 us
+[25/87] concurrent_imap...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_concurrent_imap/run_benchmark.py --output /tmp/tmp6xi4vi0m --inherit-environ PYPERFORMANCE_RUNID
+.....................
+bench_mp_pool: Mean +- std dev: 19.3 ms +- 1.6 ms
+.....................
+bench_thread_pool: Mean +- std dev: 1.42 ms +- 0.04 ms
+[26/87] coroutines...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_coroutines/run_benchmark.py --output /tmp/tmp4gngqm_i --inherit-environ PYPERFORMANCE_RUNID
+.....................
+coroutines: Mean +- std dev: 29.9 ms +- 1.1 ms
+[27/87] coverage...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_coverage/run_benchmark.py --output /tmp/tmpyhy4_ozh --inherit-environ PYPERFORMANCE_RUNID
+.....................
+coverage: Mean +- std dev: 73.2 ms +- 2.2 ms
+[28/87] crypto_pyaes...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_crypto_pyaes/run_benchmark.py --output /tmp/tmpma6vw0xf --inherit-environ PYPERFORMANCE_RUNID
+.....................
+crypto_pyaes: Mean +- std dev: 103 ms +- 4 ms
+[29/87] dask...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_dask/run_benchmark.py --output /tmp/tmploc9x9ii --inherit-environ PYPERFORMANCE_RUNID
+.....................
+dask: Mean +- std dev: 696 ms +- 16 ms
+[30/87] deepcopy...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_deepcopy/run_benchmark.py --output /tmp/tmp2kcpvhcv --inherit-environ PYPERFORMANCE_RUNID
+.....................
+deepcopy: Mean +- std dev: 465 us +- 20 us
+.....................
+deepcopy_reduce: Mean +- std dev: 4.29 us +- 0.19 us
+.....................
+deepcopy_memo: Mean +- std dev: 45.7 us +- 1.4 us
+[31/87] deltablue...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_deltablue/run_benchmark.py --output /tmp/tmpjt81gj5a --inherit-environ PYPERFORMANCE_RUNID
+.....................
+deltablue: Mean +- std dev: 4.50 ms +- 0.14 ms
+[32/87] django_template...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_django_template/run_benchmark.py --output /tmp/tmpsf2t8gsw --inherit-environ PYPERFORMANCE_RUNID
+.....................
+django_template: Mean +- std dev: 48.5 ms +- 1.3 ms
+[33/87] docutils...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_docutils/run_benchmark.py --output /tmp/tmpqqrp7g2h --inherit-environ PYPERFORMANCE_RUNID
+.....................
+docutils: Mean +- std dev: 3.42 sec +- 0.05 sec
+[34/87] dulwich_log...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_dulwich_log/run_benchmark.py --output /tmp/tmpruzabq9o --inherit-environ PYPERFORMANCE_RUNID
+.....................
+dulwich_log: Mean +- std dev: 92.5 ms +- 2.4 ms
+[35/87] fannkuch...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_fannkuch/run_benchmark.py --output /tmp/tmp5zj6q6ha --inherit-environ PYPERFORMANCE_RUNID
+.....................
+fannkuch: Mean +- std dev: 504 ms +- 7 ms
+[36/87] float...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_float/run_benchmark.py --output /tmp/tmpcc5k2dgw --inherit-environ PYPERFORMANCE_RUNID
+.....................
+float: Mean +- std dev: 105 ms +- 4 ms
+[37/87] gc_collect...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_gc_collect/run_benchmark.py --output /tmp/tmpr7umz94x --inherit-environ PYPERFORMANCE_RUNID
+.....................
+create_gc_cycles: Mean +- std dev: 1.79 ms +- 0.03 ms
+[38/87] gc_traversal...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_gc_traversal/run_benchmark.py --output /tmp/tmptx3uw19p --inherit-environ PYPERFORMANCE_RUNID
+.....................
+gc_traversal: Mean +- std dev: 4.31 ms +- 0.08 ms
+[39/87] generators...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_generators/run_benchmark.py --output /tmp/tmp8jdl4dqc --inherit-environ PYPERFORMANCE_RUNID
+.....................
+generators: Mean +- std dev: 39.2 ms +- 1.7 ms
+[40/87] genshi...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_genshi/run_benchmark.py --output /tmp/tmpblqiach1 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+genshi_text: Mean +- std dev: 28.8 ms +- 0.9 ms
+.....................
+genshi_xml: Mean +- std dev: 66.5 ms +- 2.3 ms
+[41/87] go...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py --output /tmp/tmpk28zpzdt --inherit-environ PYPERFORMANCE_RUNID
+.....................
+go: Mean +- std dev: 168 ms +- 4 ms
+[42/87] hexiom...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_hexiom/run_benchmark.py --output /tmp/tmpty8k5qt8 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+hexiom: Mean +- std dev: 7.38 ms +- 0.30 ms
+[43/87] html5lib...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_html5lib/run_benchmark.py --output /tmp/tmpm8brlnj2 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+html5lib: Mean +- std dev: 80.1 ms +- 4.3 ms
+[44/87] json_dumps...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_json_dumps/run_benchmark.py --output /tmp/tmp0x85ipll --inherit-environ PYPERFORMANCE_RUNID
+.....................
+json_dumps: Mean +- std dev: 13.9 ms +- 0.6 ms
+[45/87] json_loads...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_json_loads/run_benchmark.py --output /tmp/tmp6nznjp8k --inherit-environ PYPERFORMANCE_RUNID
+.....................
+json_loads: Mean +- std dev: 34.2 us +- 1.1 us
+[46/87] logging...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_logging/run_benchmark.py --output /tmp/tmpzm04_rvx --inherit-environ PYPERFORMANCE_RUNID
+.....................
+logging_format: Mean +- std dev: 9.87 us +- 0.27 us
+.....................
+logging_silent: Mean +- std dev: 138 ns +- 8 ns
+.....................
+logging_simple: Mean +- std dev: 8.96 us +- 0.22 us
+[47/87] mako...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_mako/run_benchmark.py --output /tmp/tmpfbd62df0 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+mako: Mean +- std dev: 14.0 ms +- 0.5 ms
+[48/87] mdp...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_mdp/run_benchmark.py --output /tmp/tmp3d0x5eus --inherit-environ PYPERFORMANCE_RUNID
+.....................
+mdp: Mean +- std dev: 3.68 sec +- 0.05 sec
+[49/87] meteor_contest...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_meteor_contest/run_benchmark.py --output /tmp/tmp_llf0tvf --inherit-environ PYPERFORMANCE_RUNID
+.....................
+meteor_contest: Mean +- std dev: 133 ms +- 4 ms
+[50/87] nbody...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_nbody/run_benchmark.py --output /tmp/tmpqh03udwu --inherit-environ PYPERFORMANCE_RUNID
+.....................
+nbody: Mean +- std dev: 99.3 ms +- 2.8 ms
+[51/87] nqueens...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_nqueens/run_benchmark.py --output /tmp/tmpryk6agk0 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+nqueens: Mean +- std dev: 110 ms +- 3 ms
+[52/87] pathlib...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pathlib/run_benchmark.py --output /tmp/tmpwx9aqd4z --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pathlib: Mean +- std dev: 31.4 ms +- 1.2 ms
+[53/87] pickle...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle --output /tmp/tmp7bahpgar --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle: Mean +- std dev: 13.8 us +- 0.7 us
+[54/87] pickle_dict...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle_dict --output /tmp/tmp8ki590i4 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_dict: Mean +- std dev: 35.8 us +- 1.1 us
+[55/87] pickle_list...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py pickle_list --output /tmp/tmpphelwwyn --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_list: Mean +- std dev: 5.41 us +- 0.16 us
+[56/87] pickle_pure_python...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py --pure-python pickle --output /tmp/tmpcji7kuh8 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pickle_pure_python: Mean +- std dev: 398 us +- 13 us
+[57/87] pidigits...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pidigits/run_benchmark.py --output /tmp/tmpmqt59d7n --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pidigits: Mean +- std dev: 236 ms +- 4 ms
+[58/87] pprint...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pprint/run_benchmark.py --output /tmp/tmp64qlrwnu --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pprint_safe_repr: Mean +- std dev: 1.03 sec +- 0.02 sec
+.....................
+pprint_pformat: Mean +- std dev: 2.10 sec +- 0.02 sec
+[59/87] pyflate...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pyflate/run_benchmark.py --output /tmp/tmpysyuwizn --inherit-environ PYPERFORMANCE_RUNID
+.....................
+pyflate: Mean +- std dev: 538 ms +- 10 ms
+[60/87] python_startup...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_python_startup/run_benchmark.py --output /tmp/tmpkbthsgbg --inherit-environ PYPERFORMANCE_RUNID
+.....................
+python_startup: Mean +- std dev: 12.6 ms +- 0.5 ms
+[61/87] python_startup_no_site...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_python_startup/run_benchmark.py --no-site --output /tmp/tmpgkqk1h07 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+python_startup_no_site: Mean +- std dev: 9.24 ms +- 0.26 ms
+[62/87] raytrace...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_raytrace/run_benchmark.py --output /tmp/tmpnfsyiidt --inherit-environ PYPERFORMANCE_RUNID
+.....................
+raytrace: Mean +- std dev: 402 ms +- 7 ms
+[63/87] regex_compile...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_regex_compile/run_benchmark.py --output /tmp/tmpiprwzygp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_compile: Mean +- std dev: 181 ms +- 3 ms
+[64/87] regex_dna...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_regex_dna/run_benchmark.py --output /tmp/tmp4hxn_s8y --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_dna: Mean +- std dev: 209 ms +- 3 ms
+[65/87] regex_effbot...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_regex_effbot/run_benchmark.py --output /tmp/tmp98hv97td --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_effbot: Mean +- std dev: 3.60 ms +- 0.10 ms
+[66/87] regex_v8...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_regex_v8/run_benchmark.py --output /tmp/tmpxkozup7p --inherit-environ PYPERFORMANCE_RUNID
+.....................
+regex_v8: Mean +- std dev: 25.7 ms +- 0.8 ms
+[67/87] richards...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_richards/run_benchmark.py --output /tmp/tmpgq45pjf6 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+richards: Mean +- std dev: 57.7 ms +- 2.0 ms
+[68/87] richards_super...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_richards_super/run_benchmark.py --output /tmp/tmp08qc0bag --inherit-environ PYPERFORMANCE_RUNID
+.....................
+richards_super: Mean +- std dev: 67.2 ms +- 2.6 ms
+[69/87] scimark...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_scimark/run_benchmark.py --output /tmp/tmp4uok12h2 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+scimark_fft: Mean +- std dev: 424 ms +- 9 ms
+.....................
+scimark_lu: Mean +- std dev: 140 ms +- 5 ms
+.....................
+scimark_monte_carlo: Mean +- std dev: 89.7 ms +- 2.7 ms
+.....................
+scimark_sor: Mean +- std dev: 152 ms +- 4 ms
+.....................
+scimark_sparse_mat_mult: Mean +- std dev: 5.30 ms +- 0.22 ms
+[70/87] spectral_norm...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_spectral_norm/run_benchmark.py --output /tmp/tmpp7tbuwqr --inherit-environ PYPERFORMANCE_RUNID
+.....................
+spectral_norm: Mean +- std dev: 130 ms +- 3 ms
+[71/87] sqlalchemy_declarative...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlalchemy_declarative/run_benchmark.py --output /tmp/tmppc077qp1 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlalchemy_declarative: Mean +- std dev: 192 ms +- 7 ms
+[72/87] sqlalchemy_imperative...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlalchemy_imperative/run_benchmark.py --output /tmp/tmpl_o_0rcp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlalchemy_imperative: Mean +- std dev: 25.1 ms +- 0.9 ms
+[73/87] sqlglot...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlglot/run_benchmark.py normalize --output /tmp/tmpwa83ke_q --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlglot_normalize: Mean +- std dev: 153 ms +- 4 ms
+[74/87] sqlglot_optimize...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlglot/run_benchmark.py optimize --output /tmp/tmpk07blm7u --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlglot_optimize: Mean +- std dev: 75.2 ms +- 2.3 ms
+[75/87] sqlglot_parse...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlglot/run_benchmark.py parse --output /tmp/tmpdc2geikp --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlglot_parse: Mean +- std dev: 1.74 ms +- 0.06 ms
+[76/87] sqlglot_transpile...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlglot/run_benchmark.py transpile --output /tmp/tmpm2any1u9 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlglot_transpile: Mean +- std dev: 2.15 ms +- 0.08 ms
+[77/87] sqlite_synth...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sqlite_synth/run_benchmark.py --output /tmp/tmptt38b3md --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sqlite_synth: Mean +- std dev: 3.66 us +- 0.14 us
+[78/87] sympy...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_sympy/run_benchmark.py --output /tmp/tmp5cl4qdnn --inherit-environ PYPERFORMANCE_RUNID
+.....................
+sympy_expand: Mean +- std dev: 609 ms +- 11 ms
+.....................
+sympy_integrate: Mean +- std dev: 25.9 ms +- 1.0 ms
+.....................
+sympy_sum: Mean +- std dev: 202 ms +- 6 ms
+.....................
+sympy_str: Mean +- std dev: 364 ms +- 7 ms
+[79/87] telco...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_telco/run_benchmark.py --output /tmp/tmprikmbfis --inherit-environ PYPERFORMANCE_RUNID
+.....................
+telco: Mean +- std dev: 9.30 ms +- 0.44 ms
+[80/87] tomli_loads...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_tomli_loads/run_benchmark.py --output /tmp/tmp7gyprw9_ --inherit-environ PYPERFORMANCE_RUNID
+.....................
+tomli_loads: Mean +- std dev: 2.86 sec +- 0.03 sec
+[81/87] tornado_http...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_tornado_http/run_benchmark.py --output /tmp/tmpqmlsfkqv --inherit-environ PYPERFORMANCE_RUNID
+.....................
+tornado_http: Mean +- std dev: 144 ms +- 9 ms
+[82/87] typing_runtime_protocols...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_typing_runtime_protocols/run_benchmark.py --output /tmp/tmppnyx3k4_ --inherit-environ PYPERFORMANCE_RUNID
+.....................
+typing_runtime_protocols: Mean +- std dev: 163 us +- 6 us
+[83/87] unpack_sequence...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_unpack_sequence/run_benchmark.py --output /tmp/tmpdjom7k6z --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpack_sequence: Mean +- std dev: 50.1 ns +- 1.1 ns
+[84/87] unpickle...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py unpickle --output /tmp/tmpbq5x0rs7 --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle: Mean +- std dev: 20.0 us +- 1.0 us
+[85/87] unpickle_list...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py unpickle_list --output /tmp/tmpauxbfpno --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle_list: Mean +- std dev: 6.29 us +- 0.14 us
+[86/87] unpickle_pure_python...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_pickle/run_benchmark.py --pure-python unpickle --output /tmp/tmpac5jnvbq --inherit-environ PYPERFORMANCE_RUNID
+.....................
+unpickle_pure_python: Mean +- std dev: 284 us +- 8 us
+[87/87] xml_etree...
+# /3.12.3/venv/cpython3.12-e9e33e0c1b67-compat-af96b9431081/bin/python -u /usr/local/lib/python3.12/site-packages/pyperformance/data-files/benchmarks/bm_xml_etree/run_benchmark.py --output /tmp/tmp4mdmh08u --inherit-environ PYPERFORMANCE_RUNID
+.....................
+xml_etree_parse: Mean +- std dev: 192 ms +- 5 ms
+.....................
+xml_etree_iterparse: Mean +- std dev: 134 ms +- 5 ms
+.....................
+xml_etree_generate: Mean +- std dev: 129 ms +- 12 ms
+.....................
+xml_etree_process: Mean +- std dev: 83.4 ms +- 2.3 ms
+
+Performance version: 1.11.0
+Report on Linux-5.15.0-94-generic-x86_64-with-glibc2.36
+Number of logical CPUs: 2
+Start date: 2024-04-10 16:00:15.611913
+End date: 2024-04-10 17:09:42.185083
+
+### 2to3 ###
+Mean +- std dev: 367 ms +- 29 ms
+
+### async_generators ###
+Mean +- std dev: 561 ms +- 7 ms
+
+### async_tree_none ###
+Mean +- std dev: 591 ms +- 28 ms
+
+### async_tree_cpu_io_mixed ###
+Mean +- std dev: 929 ms +- 33 ms
+
+### async_tree_cpu_io_mixed_tg ###
+Mean +- std dev: 927 ms +- 33 ms
+
+### async_tree_eager ###
+Mean +- std dev: 137 ms +- 3 ms
+
+### async_tree_eager_cpu_io_mixed ###
+Mean +- std dev: 539 ms +- 7 ms
+
+### async_tree_eager_cpu_io_mixed_tg ###
+Mean +- std dev: 463 ms +- 10 ms
+
+### async_tree_eager_io ###
+Mean +- std dev: 1.61 sec +- 0.05 sec
+
+### async_tree_eager_io_tg ###
+Mean +- std dev: 1.54 sec +- 0.05 sec
+
+### async_tree_eager_memoization ###
+Mean +- std dev: 338 ms +- 33 ms
+
+### async_tree_eager_memoization_tg ###
+Mean +- std dev: 253 ms +- 14 ms
+
+### async_tree_eager_tg ###
+Mean +- std dev: 96.8 ms +- 2.3 ms
+
+### async_tree_io ###
+Mean +- std dev: 1.48 sec +- 0.18 sec
+
+### async_tree_io_tg ###
+Mean +- std dev: 1.47 sec +- 0.03 sec
+
+### async_tree_memoization ###
+Mean +- std dev: 732 ms +- 34 ms
+
+### async_tree_memoization_tg ###
+Mean +- std dev: 732 ms +- 45 ms
+
+### async_tree_none_tg ###
+Mean +- std dev: 554 ms +- 11 ms
+
+### asyncio_tcp ###
+Mean +- std dev: 670 ms +- 31 ms
+
+### asyncio_tcp_ssl ###
+Mean +- std dev: 2.41 sec +- 0.04 sec
+
+### asyncio_websockets ###
+Mean +- std dev: 648 ms +- 6 ms
+
+### chameleon ###
+Mean +- std dev: 8.82 ms +- 0.38 ms
+
+### chaos ###
+Mean +- std dev: 83.4 ms +- 2.3 ms
+
+### comprehensions ###
+Mean +- std dev: 20.7 us +- 0.5 us
+
+### bench_mp_pool ###
+Mean +- std dev: 19.3 ms +- 1.6 ms
+
+### bench_thread_pool ###
+Mean +- std dev: 1.42 ms +- 0.04 ms
+
+### coroutines ###
+Mean +- std dev: 29.9 ms +- 1.1 ms
+
+### coverage ###
+Mean +- std dev: 73.2 ms +- 2.2 ms
+
+### crypto_pyaes ###
+Mean +- std dev: 103 ms +- 4 ms
+
+### dask ###
+Mean +- std dev: 696 ms +- 16 ms
+
+### deepcopy ###
+Mean +- std dev: 465 us +- 20 us
+
+### deepcopy_reduce ###
+Mean +- std dev: 4.29 us +- 0.19 us
+
+### deepcopy_memo ###
+Mean +- std dev: 45.7 us +- 1.4 us
+
+### deltablue ###
+Mean +- std dev: 4.50 ms +- 0.14 ms
+
+### django_template ###
+Mean +- std dev: 48.5 ms +- 1.3 ms
+
+### docutils ###
+Mean +- std dev: 3.42 sec +- 0.05 sec
+
+### dulwich_log ###
+Mean +- std dev: 92.5 ms +- 2.4 ms
+
+### fannkuch ###
+Mean +- std dev: 504 ms +- 7 ms
+
+### float ###
+Mean +- std dev: 105 ms +- 4 ms
+
+### create_gc_cycles ###
+Mean +- std dev: 1.79 ms +- 0.03 ms
+
+### gc_traversal ###
+Mean +- std dev: 4.31 ms +- 0.08 ms
+
+### generators ###
+Mean +- std dev: 39.2 ms +- 1.7 ms
+
+### genshi_text ###
+Mean +- std dev: 28.8 ms +- 0.9 ms
+
+### genshi_xml ###
+Mean +- std dev: 66.5 ms +- 2.3 ms
+
+### go ###
+Mean +- std dev: 168 ms +- 4 ms
+
+### hexiom ###
+Mean +- std dev: 7.38 ms +- 0.30 ms
+
+### html5lib ###
+Mean +- std dev: 80.1 ms +- 4.3 ms
+
+### json_dumps ###
+Mean +- std dev: 13.9 ms +- 0.6 ms
+
+### json_loads ###
+Mean +- std dev: 34.2 us +- 1.1 us
+
+### logging_format ###
+Mean +- std dev: 9.87 us +- 0.27 us
+
+### logging_silent ###
+Mean +- std dev: 138 ns +- 8 ns
+
+### logging_simple ###
+Mean +- std dev: 8.96 us +- 0.22 us
+
+### mako ###
+Mean +- std dev: 14.0 ms +- 0.5 ms
+
+### mdp ###
+Mean +- std dev: 3.68 sec +- 0.05 sec
+
+### meteor_contest ###
+Mean +- std dev: 133 ms +- 4 ms
+
+### nbody ###
+Mean +- std dev: 99.3 ms +- 2.8 ms
+
+### nqueens ###
+Mean +- std dev: 110 ms +- 3 ms
+
+### pathlib ###
+Mean +- std dev: 31.4 ms +- 1.2 ms
+
+### pickle ###
+Mean +- std dev: 13.8 us +- 0.7 us
+
+### pickle_dict ###
+Mean +- std dev: 35.8 us +- 1.1 us
+
+### pickle_list ###
+Mean +- std dev: 5.41 us +- 0.16 us
+
+### pickle_pure_python ###
+Mean +- std dev: 398 us +- 13 us
+
+### pidigits ###
+Mean +- std dev: 236 ms +- 4 ms
+
+### pprint_safe_repr ###
+Mean +- std dev: 1.03 sec +- 0.02 sec
+
+### pprint_pformat ###
+Mean +- std dev: 2.10 sec +- 0.02 sec
+
+### pyflate ###
+Mean +- std dev: 538 ms +- 10 ms
+
+### python_startup ###
+Mean +- std dev: 12.6 ms +- 0.5 ms
+
+### python_startup_no_site ###
+Mean +- std dev: 9.24 ms +- 0.26 ms
+
+### raytrace ###
+Mean +- std dev: 402 ms +- 7 ms
+
+### regex_compile ###
+Mean +- std dev: 181 ms +- 3 ms
+
+### regex_dna ###
+Mean +- std dev: 209 ms +- 3 ms
+
+### regex_effbot ###
+Mean +- std dev: 3.60 ms +- 0.10 ms
+
+### regex_v8 ###
+Mean +- std dev: 25.7 ms +- 0.8 ms
+
+### richards ###
+Mean +- std dev: 57.7 ms +- 2.0 ms
+
+### richards_super ###
+Mean +- std dev: 67.2 ms +- 2.6 ms
+
+### scimark_fft ###
+Mean +- std dev: 424 ms +- 9 ms
+
+### scimark_lu ###
+Mean +- std dev: 140 ms +- 5 ms
+
+### scimark_monte_carlo ###
+Mean +- std dev: 89.7 ms +- 2.7 ms
+
+### scimark_sor ###
+Mean +- std dev: 152 ms +- 4 ms
+
+### scimark_sparse_mat_mult ###
+Mean +- std dev: 5.30 ms +- 0.22 ms
+
+### spectral_norm ###
+Mean +- std dev: 130 ms +- 3 ms
+
+### sqlalchemy_declarative ###
+Mean +- std dev: 192 ms +- 7 ms
+
+### sqlalchemy_imperative ###
+Mean +- std dev: 25.1 ms +- 0.9 ms
+
+### sqlglot_normalize ###
+Mean +- std dev: 153 ms +- 4 ms
+
+### sqlglot_optimize ###
+Mean +- std dev: 75.2 ms +- 2.3 ms
+
+### sqlglot_parse ###
+Mean +- std dev: 1.74 ms +- 0.06 ms
+
+### sqlglot_transpile ###
+Mean +- std dev: 2.15 ms +- 0.08 ms
+
+### sqlite_synth ###
+Mean +- std dev: 3.66 us +- 0.14 us
+
+### sympy_expand ###
+Mean +- std dev: 609 ms +- 11 ms
+
+### sympy_integrate ###
+Mean +- std dev: 25.9 ms +- 1.0 ms
+
+### sympy_sum ###
+Mean +- std dev: 202 ms +- 6 ms
+
+### sympy_str ###
+Mean +- std dev: 364 ms +- 7 ms
+
+### telco ###
+Mean +- std dev: 9.30 ms +- 0.44 ms
+
+### tomli_loads ###
+Mean +- std dev: 2.86 sec +- 0.03 sec
+
+### tornado_http ###
+Mean +- std dev: 144 ms +- 9 ms
+
+### typing_runtime_protocols ###
+Mean +- std dev: 163 us +- 6 us
+
+### unpack_sequence ###
+Mean +- std dev: 50.1 ns +- 1.1 ns
+
+### unpickle ###
+Mean +- std dev: 20.0 us +- 1.0 us
+
+### unpickle_list ###
+Mean +- std dev: 6.29 us +- 0.14 us
+
+### unpickle_pure_python ###
+Mean +- std dev: 284 us +- 8 us
+
+### xml_etree_parse ###
+Mean +- std dev: 192 ms +- 5 ms
+
+### xml_etree_iterparse ###
+Mean +- std dev: 134 ms +- 5 ms
+
+### xml_etree_generate ###
+Mean +- std dev: 129 ms +- 12 ms
+
+### xml_etree_process ###
+Mean +- std dev: 83.4 ms +- 2.3 ms
+
