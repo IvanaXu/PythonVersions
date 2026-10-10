@@ -11,11 +11,11 @@ cd Python-$version
 ./configure
 make && make install
 
-cd /$1
+cd /
 python3 -V
 
 python3 -m venv A
-source A/bin/activate
+. A/bin/activate
 
 python3 -m pip install --upgrade pip
 python3 -m pip install pyperformance
