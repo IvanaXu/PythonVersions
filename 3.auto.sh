@@ -1,5 +1,10 @@
 
-pip3 install tqdm pandas tabulate
+apt update
+apt install -y python3-venv
+python3 -m venv a
+source a/bin/activate
+
+python -m pip install tqdm pandas tabulate
 git config --global user.email "ivan@tangjt.cn"
 git config --global user.name "ivan"
 

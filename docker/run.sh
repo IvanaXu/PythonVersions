@@ -1,5 +1,9 @@
 
 version=$1
+
+apt update
+apt install -y python3-venv
+
 wget https://www.python.org/ftp/python/$version/Python-$version.tgz
 
 tar -zxvf Python-$version.tgz
@@ -7,10 +11,13 @@ cd Python-$version
 ./configure
 make && make install
 
-cd /$1
 python3 -V
-pip3 -V
 
-pip3 install pyperformance -i https://pypi.tuna.tsinghua.edu.cn/simple
+python3 -m venv A
+source A/bin/activate
+
+python3 -m pip install --upgrade pip
+python3 -m pip install pyperformance
+
 rm -rf py$version.json
-pyperformance run -o py$version.json > /$version/py$version.log
+python3 -m pyperformance run -o py$version.json > /$version/py$version.log
