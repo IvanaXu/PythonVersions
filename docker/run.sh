@@ -11,6 +11,7 @@ cd Python-$version
 ./configure
 make && make install
 
+cd /$1
 python3 -V
 
 python3 -m venv A

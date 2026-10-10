@@ -21,7 +21,8 @@ docker images
 #
 echo ----------------------------------------------
 echo test images
-docker run --name t$ver -v $basep/Version/$1:/$1 $regurl:$ver sh run.sh $1
+docker run --name t$ver -v $basep/Version/$1:/$1 $regurl:$ver /bin/bash
+# docker run --name t$ver -v $basep/Version/$1:/$1 $regurl:$ver sh run.sh $1
 docker ps -a
 docker rm t$ver -f
 docker ps -a
