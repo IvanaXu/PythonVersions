@@ -19,197 +19,198 @@
 | 3.8.4     | July 13, 2020  | 100.0000% | >          |
 | 3.8.5     | July 20, 2020  | 100.2673% | >          |
 | 3.8.6     | Sept. 24, 2020 | 100.4912% | >          |
+| 3.8.7     | Dec. 21, 2020  | 100.7746% | >          |
 
 ### 2.Details
-|    | Task                     | 3.8.0                | 3.8.1                | 3.8.2                | 3.8.3                | 3.8.4                | 3.8.5                | 3.8.6                |
-|---:|:-------------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|
-|  0 | 2to3                     | 496 ms +- 16 ms      | 498 ms +- 17 ms      | 491 ms +- 16 ms      | 489 ms +- 14 ms      | 485 ms +- 14 ms      | 490 ms +- 18 ms      | 486 ms +- 14 ms      |
-|  1 | async_generators         | 563 ms +- 26 ms      | 564 ms +- 25 ms      | 557 ms +- 15 ms      | 557 ms +- 26 ms      | 555 ms +- 23 ms      | 550 ms +- 20 ms      | 548 ms +- 13 ms      |
-|  2 | async_tree_cpu_io_mixed  | 1.41 sec +- 0.05 sec | 1.41 sec +- 0.05 sec | 1.39 sec +- 0.05 sec | 1.42 sec +- 0.06 sec | 1.41 sec +- 0.06 sec | 1.39 sec +- 0.06 sec | 1.38 sec +- 0.06 sec |
-|  3 | async_tree_io            | 2.53 sec +- 0.05 sec | 2.54 sec +- 0.04 sec | 2.53 sec +- 0.05 sec | 2.49 sec +- 0.04 sec | 2.49 sec +- 0.05 sec | 2.47 sec +- 0.05 sec | 2.45 sec +- 0.04 sec |
-|  4 | async_tree_memoization   | 1.27 sec +- 0.04 sec | 1.28 sec +- 0.04 sec | 1.24 sec +- 0.05 sec | 1.26 sec +- 0.05 sec | 1.25 sec +- 0.06 sec | 1.25 sec +- 0.06 sec | 1.23 sec +- 0.05 sec |
-|  5 | async_tree_none          | 1.04 sec +- 0.05 sec | 1.05 sec +- 0.04 sec | 1.04 sec +- 0.05 sec | 1.03 sec +- 0.05 sec | 1.02 sec +- 0.05 sec | 1.01 sec +- 0.05 sec | 1.01 sec +- 0.05 sec |
-|  6 | asyncio_tcp              | 1.42 sec +- 0.05 sec | 1.40 sec +- 0.05 sec | 1.41 sec +- 0.05 sec | 1.38 sec +- 0.05 sec | 1.34 sec +- 0.04 sec | 1.34 sec +- 0.04 sec | 1.32 sec +- 0.04 sec |
-|  7 | asyncio_tcp_ssl          | 3.45 sec +- 0.44 sec | 3.70 sec +- 0.65 sec | 3.28 sec +- 0.06 sec | 3.64 sec +- 0.63 sec | 3.70 sec +- 0.66 sec | 3.67 sec +- 0.66 sec | 3.82 sec +- 0.69 sec |
-|  8 | asyncio_websockets       | 629 ms +- 18 ms      | 624 ms +- 14 ms      | 630 ms +- 14 ms      | 624 ms +- 13 ms      | 628 ms +- 18 ms      | 621 ms +- 11 ms      | 621 ms +- 12 ms      |
-|  9 | bench_mp_pool            | 11.6 ms +- 1.3 ms    | 12.0 ms +- 1.1 ms    | 11.8 ms +- 1.3 ms    | 11.9 ms +- 1.5 ms    | 11.6 ms +- 1.0 ms    | 11.5 ms +- 1.2 ms    | 11.3 ms +- 1.1 ms    |
-| 10 | bench_thread_pool        | 1.83 ms +- 0.09 ms   | 1.80 ms +- 0.07 ms   | 1.81 ms +- 0.07 ms   | 1.81 ms +- 0.08 ms   | 1.80 ms +- 0.08 ms   | 1.79 ms +- 0.06 ms   | 1.76 ms +- 0.06 ms   |
-| 11 | chameleon                | 15.1 ms +- 0.8 ms    | 14.9 ms +- 0.8 ms    | 15.0 ms +- 0.9 ms    | 14.9 ms +- 0.6 ms    | 14.9 ms +- 0.6 ms    | 14.7 ms +- 0.6 ms    | 14.6 ms +- 0.3 ms    |
-| 12 | chaos                    | 179 ms +- 12 ms      | 181 ms +- 4 ms       | 180 ms +- 8 ms       | 175 ms +- 4 ms       | 175 ms +- 3 ms       | 178 ms +- 8 ms       | 177 ms +- 8 ms       |
-| 13 | comprehensions           | 40.5 us +- 1.6 us    | 41.2 us +- 1.4 us    | 40.7 us +- 1.7 us    | 41.3 us +- 1.7 us    | 41.0 us +- 1.0 us    | 40.9 us +- 1.9 us    | 41.3 us +- 2.2 us    |
-| 14 | coroutines               | 61.0 ms +- 2.1 ms    | 60.4 ms +- 4.1 ms    | 59.7 ms +- 3.7 ms    | 59.5 ms +- 2.4 ms    | 60.1 ms +- 2.7 ms    | 60.4 ms +- 4.0 ms    | 60.2 ms +- 3.4 ms    |
-| 15 | coverage                 | 72.0 ms +- 2.3 ms    | 73.3 ms +- 3.6 ms    | 71.7 ms +- 2.5 ms    | 73.4 ms +- 3.5 ms    | 73.1 ms +- 2.2 ms    | 72.6 ms +- 1.3 ms    | 72.2 ms +- 1.8 ms    |
-| 16 | create_gc_cycles         | 1.79 ms +- 0.05 ms   | 1.78 ms +- 0.05 ms   | 1.78 ms +- 0.06 ms   | 1.77 ms +- 0.05 ms   | 1.78 ms +- 0.04 ms   | 1.77 ms +- 0.05 ms   | 1.79 ms +- 0.10 ms   |
-| 17 | crypto_pyaes             | 167 ms +- 11 ms      | 165 ms +- 10 ms      | 166 ms +- 11 ms      | 166 ms +- 4 ms       | 167 ms +- 5 ms       | 166 ms +- 8 ms       | 167 ms +- 8 ms       |
-| 18 | dask                     | /                    | /                    | /                    | /                    | 954 ms +- 26 ms      | 952 ms +- 29 ms      | 964 ms +- 34 ms      |
-| 19 | deepcopy                 | 692 us +- 23 us      | 702 us +- 41 us      | 696 us +- 26 us      | 682 us +- 26 us      | 687 us +- 32 us      | 680 us +- 29 us      | 685 us +- 63 us      |
-| 20 | deepcopy_memo            | 79.8 us +- 3.4 us    | 80.4 us +- 1.5 us    | 80.7 us +- 4.2 us    | 79.0 us +- 2.6 us    | 80.0 us +- 5.9 us    | 80.2 us +- 2.4 us    | 77.9 us +- 1.4 us    |
-| 21 | deepcopy_reduce          | 6.12 us +- 0.37 us   | 6.24 us +- 0.24 us   | 6.16 us +- 0.27 us   | 6.04 us +- 0.17 us   | 6.11 us +- 0.23 us   | 6.03 us +- 0.22 us   | 6.01 us +- 0.14 us   |
-| 22 | deltablue                | 11.9 ms +- 0.6 ms    | 11.7 ms +- 0.4 ms    | 11.9 ms +- 0.8 ms    | 11.8 ms +- 0.7 ms    | 11.8 ms +- 0.4 ms    | 11.9 ms +- 0.8 ms    | 11.7 ms +- 0.3 ms    |
-| 23 | docutils                 | 4.27 sec +- 0.08 sec | 4.31 sec +- 0.08 sec | 4.21 sec +- 0.06 sec | 4.16 sec +- 0.07 sec | 4.18 sec +- 0.07 sec | 4.16 sec +- 0.08 sec | 4.13 sec +- 0.07 sec |
-| 24 | dulwich_log              | 116 ms +- 6 ms       | 115 ms +- 3 ms       | 118 ms +- 6 ms       | 115 ms +- 2 ms       | 116 ms +- 8 ms       | 115 ms +- 3 ms       | 114 ms +- 7 ms       |
-| 25 | fannkuch                 | 659 ms +- 10 ms      | 661 ms +- 25 ms      | 663 ms +- 21 ms      | 650 ms +- 16 ms      | 652 ms +- 21 ms      | 648 ms +- 15 ms      | 650 ms +- 17 ms      |
-| 26 | float                    | 179 ms +- 6 ms       | 178 ms +- 10 ms      | 176 ms +- 6 ms       | 179 ms +- 6 ms       | 176 ms +- 5 ms       | 177 ms +- 5 ms       | 177 ms +- 9 ms       |
-| 27 | gc_traversal             | 4.71 ms +- 0.13 ms   | 4.77 ms +- 0.16 ms   | 4.67 ms +- 0.12 ms   | 4.64 ms +- 0.08 ms   | 4.68 ms +- 0.17 ms   | 4.72 ms +- 0.16 ms   | 4.74 ms +- 0.18 ms   |
-| 28 | generators               | 94.3 ms +- 5.1 ms    | 93.7 ms +- 2.0 ms    | 95.5 ms +- 5.4 ms    | 94.6 ms +- 4.2 ms    | 93.5 ms +- 3.6 ms    | 94.2 ms +- 3.4 ms    | 93.0 ms +- 2.3 ms    |
-| 29 | genshi_text              | 45.6 ms +- 2.3 ms    | 45.9 ms +- 1.0 ms    | 44.6 ms +- 1.1 ms    | 45.0 ms +- 1.6 ms    | 46.2 ms +- 3.0 ms    | 46.8 ms +- 2.7 ms    | 45.6 ms +- 1.7 ms    |
-| 30 | genshi_xml               | 92.3 ms +- 5.0 ms    | 89.8 ms +- 3.0 ms    | 88.5 ms +- 3.7 ms    | 89.4 ms +- 5.4 ms    | 90.3 ms +- 3.2 ms    | 90.4 ms +- 3.4 ms    | 92.2 ms +- 6.5 ms    |
-| 31 | go                       | 396 ms +- 10 ms      | 399 ms +- 9 ms       | 400 ms +- 14 ms      | 390 ms +- 6 ms       | 389 ms +- 12 ms      | 387 ms +- 10 ms      | 387 ms +- 14 ms      |
-| 32 | hexiom                   | 15.5 ms +- 1.1 ms    | 15.8 ms +- 1.5 ms    | 15.5 ms +- 1.4 ms    | 15.3 ms +- 0.5 ms    | 15.5 ms +- 0.6 ms    | 15.6 ms +- 1.1 ms    | 15.5 ms +- 1.0 ms    |
-| 33 | html5lib                 | 126 ms +- 12 ms      | 128 ms +- 9 ms       | 128 ms +- 10 ms      | 125 ms +- 8 ms       | 126 ms +- 7 ms       | 125 ms +- 10 ms      | 124 ms +- 7 ms       |
-| 34 | json_dumps               | 19.5 ms +- 1.5 ms    | 19.5 ms +- 0.8 ms    | 19.5 ms +- 1.2 ms    | 19.0 ms +- 0.8 ms    | 19.1 ms +- 0.7 ms    | 19.0 ms +- 0.4 ms    | 19.1 ms +- 1.1 ms    |
-| 35 | json_loads               | 40.5 us +- 2.4 us    | 39.7 us +- 2.2 us    | 39.2 us +- 1.9 us    | 39.2 us +- 1.3 us    | 39.6 us +- 1.3 us    | 39.5 us +- 2.0 us    | 39.7 us +- 1.0 us    |
-| 36 | logging_format           | 14.6 us +- 0.5 us    | 14.4 us +- 0.3 us    | 14.7 us +- 0.6 us    | 14.8 us +- 0.5 us    | 14.3 us +- 0.4 us    | 14.5 us +- 0.5 us    | 14.5 us +- 0.5 us    |
-| 37 | logging_silent           | 301 ns +- 11 ns      | 304 ns +- 32 ns      | 303 ns +- 15 ns      | 301 ns +- 12 ns      | 306 ns +- 17 ns      | 304 ns +- 12 ns      | 305 ns +- 20 ns      |
-| 38 | logging_simple           | 13.2 us +- 0.5 us    | 13.4 us +- 0.5 us    | 13.4 us +- 0.7 us    | 13.5 us +- 0.9 us    | 13.3 us +- 0.6 us    | 13.3 us +- 0.4 us    | 13.2 us +- 0.3 us    |
-| 39 | mako                     | 27.9 ms +- 2.5 ms    | 27.1 ms +- 1.1 ms    | 26.7 ms +- 0.8 ms    | 27.2 ms +- 2.3 ms    | 26.8 ms +- 1.7 ms    | 26.8 ms +- 1.1 ms    | 26.6 ms +- 2.6 ms    |
-| 40 | mdp                      | 4.41 sec +- 0.07 sec | 4.40 sec +- 0.07 sec | 4.35 sec +- 0.07 sec | 4.33 sec +- 0.07 sec | 4.35 sec +- 0.07 sec | 4.34 sec +- 0.07 sec | 4.29 sec +- 0.06 sec |
-| 41 | meteor_contest           | 147 ms +- 5 ms       | 145 ms +- 2 ms       | 146 ms +- 6 ms       | 145 ms +- 5 ms       | 146 ms +- 5 ms       | 147 ms +- 7 ms       | 146 ms +- 5 ms       |
-| 42 | nbody                    | 197 ms +- 4 ms       | 187 ms +- 6 ms       | 200 ms +- 14 ms      | 184 ms +- 6 ms       | 180 ms +- 4 ms       | 188 ms +- 12 ms      | 183 ms +- 4 ms       |
-| 43 | nqueens                  | 145 ms +- 5 ms       | 148 ms +- 16 ms      | 146 ms +- 4 ms       | 143 ms +- 2 ms       | 144 ms +- 5 ms       | 146 ms +- 8 ms       | 144 ms +- 3 ms       |
-| 44 | pathlib                  | 39.3 ms +- 3.7 ms    | 38.8 ms +- 3.4 ms    | 36.9 ms +- 1.1 ms    | 36.6 ms +- 1.1 ms    | 37.0 ms +- 1.0 ms    | 37.1 ms +- 1.6 ms    | 37.1 ms +- 2.0 ms    |
-| 45 | pickle                   | 13.6 us +- 0.4 us    | 13.8 us +- 0.9 us    | 14.0 us +- 0.7 us    | 14.2 us +- 1.0 us    | 14.0 us +- 0.6 us    | 13.9 us +- 0.8 us    | 13.8 us +- 0.7 us    |
-| 46 | pickle_dict              | 37.7 us +- 0.8 us    | 37.0 us +- 1.8 us    | 37.8 us +- 1.9 us    | 37.5 us +- 1.8 us    | 37.5 us +- 0.9 us    | 37.9 us +- 2.1 us    | 37.4 us +- 1.6 us    |
-| 47 | pickle_list              | 5.57 us +- 0.32 us   | 5.65 us +- 0.56 us   | 5.60 us +- 0.52 us   | 5.41 us +- 0.25 us   | 5.44 us +- 0.28 us   | 5.44 us +- 0.44 us   | 5.43 us +- 0.25 us   |
-| 48 | pickle_pure_python       | 743 us +- 70 us      | 744 us +- 54 us      | 737 us +- 43 us      | 726 us +- 24 us      | 724 us +- 38 us      | 719 us +- 22 us      | 718 us +- 17 us      |
-| 49 | pidigits                 | 235 ms +- 4 ms       | 236 ms +- 5 ms       | 237 ms +- 10 ms      | 236 ms +- 4 ms       | 236 ms +- 5 ms       | 239 ms +- 8 ms       | 235 ms +- 8 ms       |
-| 50 | pprint_pformat           | 2.26 sec +- 0.04 sec | 2.25 sec +- 0.05 sec | 2.27 sec +- 0.04 sec | 2.24 sec +- 0.04 sec | 2.24 sec +- 0.05 sec | 2.25 sec +- 0.05 sec | 2.23 sec +- 0.04 sec |
-| 51 | pyflate                  | 1.05 sec +- 0.02 sec | 1.05 sec +- 0.03 sec | 1.05 sec +- 0.03 sec | 1.03 sec +- 0.02 sec | 1.02 sec +- 0.02 sec | 1.03 sec +- 0.02 sec | 1.02 sec +- 0.02 sec |
-| 52 | python_startup           | 13.8 ms +- 0.8 ms    | 13.8 ms +- 0.8 ms    | 13.6 ms +- 0.8 ms    | 13.5 ms +- 0.9 ms    | 13.6 ms +- 0.8 ms    | 13.7 ms +- 0.8 ms    | 13.4 ms +- 0.7 ms    |
-| 53 | python_startup_no_site   | 9.05 ms +- 0.61 ms   | 9.00 ms +- 0.62 ms   | 8.80 ms +- 0.49 ms   | 8.62 ms +- 0.32 ms   | 8.67 ms +- 0.38 ms   | 8.72 ms +- 0.44 ms   | 8.68 ms +- 0.42 ms   |
-| 54 | raytrace                 | 839 ms +- 21 ms      | 831 ms +- 21 ms      | 822 ms +- 15 ms      | 823 ms +- 24 ms      | 827 ms +- 17 ms      | 826 ms +- 21 ms      | 820 ms +- 19 ms      |
-| 55 | regex_compile            | 256 ms +- 7 ms       | 263 ms +- 12 ms      | 256 ms +- 8 ms       | 255 ms +- 7 ms       | 257 ms +- 13 ms      | 255 ms +- 10 ms      | 254 ms +- 6 ms       |
-| 56 | regex_dna                | 237 ms +- 12 ms      | 234 ms +- 4 ms       | 232 ms +- 10 ms      | 230 ms +- 2 ms       | 230 ms +- 5 ms       | 235 ms +- 11 ms      | 231 ms +- 6 ms       |
-| 57 | regex_effbot             | 3.93 ms +- 0.15 ms   | 4.01 ms +- 0.22 ms   | 3.75 ms +- 0.14 ms   | 3.74 ms +- 0.10 ms   | 3.74 ms +- 0.11 ms   | 3.78 ms +- 0.33 ms   | 3.78 ms +- 0.17 ms   |
-| 58 | regex_v8                 | 32.0 ms +- 2.2 ms    | 31.2 ms +- 1.6 ms    | 31.5 ms +- 2.7 ms    | 31.3 ms +- 2.9 ms    | 31.5 ms +- 1.6 ms    | 31.2 ms +- 1.4 ms    | 31.2 ms +- 0.7 ms    |
-| 59 | richards                 | 120 ms +- 10 ms      | 116 ms +- 3 ms       | 117 ms +- 5 ms       | 118 ms +- 8 ms       | 114 ms +- 5 ms       | 116 ms +- 5 ms       | 115 ms +- 3 ms       |
-| 60 | richards_super           | 141 ms +- 8 ms       | 138 ms +- 5 ms       | 138 ms +- 5 ms       | 138 ms +- 5 ms       | 134 ms +- 2 ms       | 136 ms +- 3 ms       | 138 ms +- 4 ms       |
-| 61 | scimark_fft              | 526 ms +- 10 ms      | 525 ms +- 13 ms      | 524 ms +- 14 ms      | 513 ms +- 15 ms      | 513 ms +- 19 ms      | 511 ms +- 9 ms       | 507 ms +- 16 ms      |
-| 62 | scimark_lu               | 231 ms +- 14 ms      | 265 ms +- 10 ms      | 232 ms +- 16 ms      | 248 ms +- 16 ms      | 244 ms +- 12 ms      | 237 ms +- 12 ms      | 241 ms +- 11 ms      |
-| 63 | scimark_monte_carlo      | 158 ms +- 6 ms       | 164 ms +- 7 ms       | 162 ms +- 5 ms       | 161 ms +- 6 ms       | 155 ms +- 7 ms       | 156 ms +- 8 ms       | 158 ms +- 11 ms      |
-| 64 | scimark_sor              | 306 ms +- 11 ms      | 316 ms +- 14 ms      | 308 ms +- 13 ms      | 315 ms +- 22 ms      | 307 ms +- 12 ms      | 310 ms +- 11 ms      | 308 ms +- 13 ms      |
-| 65 | scimark_sparse_mat_mult  | 6.29 ms +- 0.19 ms   | 6.48 ms +- 0.16 ms   | 6.51 ms +- 0.26 ms   | 6.58 ms +- 0.49 ms   | 6.52 ms +- 0.20 ms   | 6.62 ms +- 0.36 ms   | 6.57 ms +- 0.18 ms   |
-| 66 | spectral_norm            | 203 ms +- 4 ms       | 203 ms +- 7 ms       | 204 ms +- 4 ms       | 201 ms +- 13 ms      | 204 ms +- 12 ms      | 204 ms +- 8 ms       | 200 ms +- 10 ms      |
-| 67 | sqlalchemy_declarative   | 228 ms +- 7 ms       | 232 ms +- 12 ms      | 229 ms +- 11 ms      | 225 ms +- 7 ms       | 227 ms +- 10 ms      | 226 ms +- 8 ms       | 225 ms +- 9 ms       |
-| 68 | sqlalchemy_imperative    | 32.4 ms +- 2.2 ms    | 33.0 ms +- 2.4 ms    | 32.3 ms +- 2.4 ms    | 32.0 ms +- 1.8 ms    | 32.1 ms +- 2.2 ms    | 31.5 ms +- 1.8 ms    | 32.4 ms +- 3.3 ms    |
-| 69 | sqlglot_normalize        | 202 ms +- 7 ms       | 208 ms +- 10 ms      | 200 ms +- 7 ms       | 198 ms +- 5 ms       | 200 ms +- 7 ms       | 201 ms +- 10 ms      | 199 ms +- 5 ms       |
-| 70 | sqlglot_optimize         | 95.2 ms +- 3.1 ms    | 99.5 ms +- 6.2 ms    | 95.0 ms +- 2.4 ms    | 94.9 ms +- 2.4 ms    | 97.9 ms +- 3.5 ms    | 96.2 ms +- 4.4 ms    | 95.7 ms +- 2.8 ms    |
-| 71 | sqlglot_parse            | 3.32 ms +- 0.16 ms   | 3.44 ms +- 0.14 ms   | 3.45 ms +- 0.29 ms   | 3.38 ms +- 0.09 ms   | 3.40 ms +- 0.13 ms   | 3.32 ms +- 0.13 ms   | 3.32 ms +- 0.07 ms   |
-| 72 | sqlglot_transpile        | 3.85 ms +- 0.17 ms   | 4.03 ms +- 0.29 ms   | 3.91 ms +- 0.08 ms   | 3.85 ms +- 0.06 ms   | 3.88 ms +- 0.16 ms   | 3.85 ms +- 0.14 ms   | 3.85 ms +- 0.13 ms   |
-| 73 | sqlite_synth             | 4.30 us +- 0.36 us   | 4.23 us +- 0.22 us   | 4.24 us +- 0.22 us   | 4.26 us +- 0.16 us   | 4.18 us +- 0.22 us   | 4.16 us +- 0.14 us   | 4.20 us +- 0.15 us   |
-| 74 | sympy_expand             | 753 ms +- 19 ms      | 757 ms +- 21 ms      | 755 ms +- 22 ms      | 751 ms +- 21 ms      | 753 ms +- 26 ms      | 751 ms +- 18 ms      | 755 ms +- 18 ms      |
-| 75 | sympy_integrate          | 34.0 ms +- 0.9 ms    | 34.4 ms +- 1.4 ms    | 33.5 ms +- 1.1 ms    | 33.6 ms +- 2.1 ms    | 34.1 ms +- 1.8 ms    | 33.7 ms +- 1.4 ms    | 33.8 ms +- 1.4 ms    |
-| 76 | sympy_str                | 467 ms +- 20 ms      | 466 ms +- 10 ms      | 461 ms +- 13 ms      | 456 ms +- 9 ms       | 463 ms +- 14 ms      | 463 ms +- 18 ms      | 463 ms +- 16 ms      |
-| 77 | sympy_sum                | 262 ms +- 12 ms      | 264 ms +- 9 ms       | 261 ms +- 10 ms      | 264 ms +- 11 ms      | 261 ms +- 11 ms      | 260 ms +- 11 ms      | 259 ms +- 9 ms       |
-| 78 | telco                    | 9.57 ms +- 0.68 ms   | 9.37 ms +- 0.63 ms   | 9.08 ms +- 0.40 ms   | 9.17 ms +- 0.31 ms   | 9.14 ms +- 0.48 ms   | 9.06 ms +- 0.34 ms   | 9.15 ms +- 0.55 ms   |
-| 79 | tomli_loads              | 4.06 sec +- 0.08 sec | 4.10 sec +- 0.08 sec | 4.05 sec +- 0.07 sec | 4.00 sec +- 0.07 sec | 3.96 sec +- 0.08 sec | 3.96 sec +- 0.07 sec | 3.92 sec +- 0.07 sec |
-| 80 | tornado_http             | 229 ms +- 15 ms      | 227 ms +- 11 ms      | 220 ms +- 11 ms      | 219 ms +- 14 ms      | 222 ms +- 14 ms      | 219 ms +- 11 ms      | 220 ms +- 14 ms      |
-| 81 | typing_runtime_protocols | 802 us +- 37 us      | 788 us +- 13 us      | 787 us +- 27 us      | 804 us +- 71 us      | 805 us +- 25 us      | 798 us +- 39 us      | 796 us +- 16 us      |
-| 82 | unpack_sequence          | 69.8 ns +- 2.3 ns    | 70.6 ns +- 5.0 ns    | 69.7 ns +- 5.2 ns    | 66.9 ns +- 5.5 ns    | 66.1 ns +- 3.3 ns    | 65.4 ns +- 1.2 ns    | 65.5 ns +- 1.6 ns    |
-| 83 | unpickle                 | 21.5 us +- 2.3 us    | 20.9 us +- 0.6 us    | 20.9 us +- 1.1 us    | 20.8 us +- 0.7 us    | 21.3 us +- 1.2 us    | 20.7 us +- 0.4 us    | 20.7 us +- 0.5 us    |
-| 84 | unpickle_list            | 6.03 us +- 0.21 us   | 6.05 us +- 0.43 us   | 6.02 us +- 0.51 us   | 6.08 us +- 0.29 us   | 6.22 us +- 0.31 us   | 6.20 us +- 0.57 us   | 6.17 us +- 0.37 us   |
-| 85 | unpickle_pure_python     | 496 us +- 18 us      | 500 us +- 15 us      | 500 us +- 25 us      | 497 us +- 29 us      | 495 us +- 12 us      | 491 us +- 25 us      | 490 us +- 16 us      |
-| 86 | xml_etree_generate       | 145 ms +- 9 ms       | 147 ms +- 10 ms      | 145 ms +- 5 ms       | 145 ms +- 11 ms      | 148 ms +- 13 ms      | 144 ms +- 6 ms       | 146 ms +- 7 ms       |
-| 87 | xml_etree_iterparse      | 148 ms +- 6 ms       | 147 ms +- 7 ms       | 143 ms +- 5 ms       | 143 ms +- 9 ms       | 141 ms +- 3 ms       | 142 ms +- 4 ms       | 145 ms +- 9 ms       |
-| 88 | xml_etree_parse          | 207 ms +- 11 ms      | 205 ms +- 6 ms       | 200 ms +- 6 ms       | 200 ms +- 7 ms       | 204 ms +- 10 ms      | 201 ms +- 5 ms       | 200 ms +- 5 ms       |
-| 89 | xml_etree_process        | 116 ms +- 9 ms       | 115 ms +- 5 ms       | 114 ms +- 6 ms       | 113 ms +- 2 ms       | 113 ms +- 7 ms       | 113 ms +- 4 ms       | 114 ms +- 5 ms       |
+|    | Task                     | 3.8.0                | 3.8.1                | 3.8.2                | 3.8.3                | 3.8.4                | 3.8.5                | 3.8.6                | 3.8.7                |
+|---:|:-------------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|:---------------------|
+|  0 | 2to3                     | 496 ms +- 16 ms      | 498 ms +- 17 ms      | 491 ms +- 16 ms      | 489 ms +- 14 ms      | 485 ms +- 14 ms      | 490 ms +- 18 ms      | 486 ms +- 14 ms      | 487 ms +- 9 ms       |
+|  1 | async_generators         | 563 ms +- 26 ms      | 564 ms +- 25 ms      | 557 ms +- 15 ms      | 557 ms +- 26 ms      | 555 ms +- 23 ms      | 550 ms +- 20 ms      | 548 ms +- 13 ms      | 553 ms +- 19 ms      |
+|  2 | async_tree_cpu_io_mixed  | 1.41 sec +- 0.05 sec | 1.41 sec +- 0.05 sec | 1.39 sec +- 0.05 sec | 1.42 sec +- 0.06 sec | 1.41 sec +- 0.06 sec | 1.39 sec +- 0.06 sec | 1.38 sec +- 0.06 sec | 1.39 sec +- 0.06 sec |
+|  3 | async_tree_io            | 2.53 sec +- 0.05 sec | 2.54 sec +- 0.04 sec | 2.53 sec +- 0.05 sec | 2.49 sec +- 0.04 sec | 2.49 sec +- 0.05 sec | 2.47 sec +- 0.05 sec | 2.45 sec +- 0.04 sec | 2.47 sec +- 0.05 sec |
+|  4 | async_tree_memoization   | 1.27 sec +- 0.04 sec | 1.28 sec +- 0.04 sec | 1.24 sec +- 0.05 sec | 1.26 sec +- 0.05 sec | 1.25 sec +- 0.06 sec | 1.25 sec +- 0.06 sec | 1.23 sec +- 0.05 sec | 1.25 sec +- 0.06 sec |
+|  5 | async_tree_none          | 1.04 sec +- 0.05 sec | 1.05 sec +- 0.04 sec | 1.04 sec +- 0.05 sec | 1.03 sec +- 0.05 sec | 1.02 sec +- 0.05 sec | 1.01 sec +- 0.05 sec | 1.01 sec +- 0.05 sec | 1.01 sec +- 0.05 sec |
+|  6 | asyncio_tcp              | 1.42 sec +- 0.05 sec | 1.40 sec +- 0.05 sec | 1.41 sec +- 0.05 sec | 1.38 sec +- 0.05 sec | 1.34 sec +- 0.04 sec | 1.34 sec +- 0.04 sec | 1.32 sec +- 0.04 sec | 1.37 sec +- 0.07 sec |
+|  7 | asyncio_tcp_ssl          | 3.45 sec +- 0.44 sec | 3.70 sec +- 0.65 sec | 3.28 sec +- 0.06 sec | 3.64 sec +- 0.63 sec | 3.70 sec +- 0.66 sec | 3.67 sec +- 0.66 sec | 3.82 sec +- 0.69 sec | 3.58 sec +- 0.61 sec |
+|  8 | asyncio_websockets       | 629 ms +- 18 ms      | 624 ms +- 14 ms      | 630 ms +- 14 ms      | 624 ms +- 13 ms      | 628 ms +- 18 ms      | 621 ms +- 11 ms      | 621 ms +- 12 ms      | 621 ms +- 11 ms      |
+|  9 | bench_mp_pool            | 11.6 ms +- 1.3 ms    | 12.0 ms +- 1.1 ms    | 11.8 ms +- 1.3 ms    | 11.9 ms +- 1.5 ms    | 11.6 ms +- 1.0 ms    | 11.5 ms +- 1.2 ms    | 11.3 ms +- 1.1 ms    | 11.8 ms +- 1.4 ms    |
+| 10 | bench_thread_pool        | 1.83 ms +- 0.09 ms   | 1.80 ms +- 0.07 ms   | 1.81 ms +- 0.07 ms   | 1.81 ms +- 0.08 ms   | 1.80 ms +- 0.08 ms   | 1.79 ms +- 0.06 ms   | 1.76 ms +- 0.06 ms   | 1.78 ms +- 0.05 ms   |
+| 11 | chameleon                | 15.1 ms +- 0.8 ms    | 14.9 ms +- 0.8 ms    | 15.0 ms +- 0.9 ms    | 14.9 ms +- 0.6 ms    | 14.9 ms +- 0.6 ms    | 14.7 ms +- 0.6 ms    | 14.6 ms +- 0.3 ms    | 14.5 ms +- 0.4 ms    |
+| 12 | chaos                    | 179 ms +- 12 ms      | 181 ms +- 4 ms       | 180 ms +- 8 ms       | 175 ms +- 4 ms       | 175 ms +- 3 ms       | 178 ms +- 8 ms       | 177 ms +- 8 ms       | 178 ms +- 5 ms       |
+| 13 | comprehensions           | 40.5 us +- 1.6 us    | 41.2 us +- 1.4 us    | 40.7 us +- 1.7 us    | 41.3 us +- 1.7 us    | 41.0 us +- 1.0 us    | 40.9 us +- 1.9 us    | 41.3 us +- 2.2 us    | 41.3 us +- 1.3 us    |
+| 14 | coroutines               | 61.0 ms +- 2.1 ms    | 60.4 ms +- 4.1 ms    | 59.7 ms +- 3.7 ms    | 59.5 ms +- 2.4 ms    | 60.1 ms +- 2.7 ms    | 60.4 ms +- 4.0 ms    | 60.2 ms +- 3.4 ms    | 60.0 ms +- 1.6 ms    |
+| 15 | coverage                 | 72.0 ms +- 2.3 ms    | 73.3 ms +- 3.6 ms    | 71.7 ms +- 2.5 ms    | 73.4 ms +- 3.5 ms    | 73.1 ms +- 2.2 ms    | 72.6 ms +- 1.3 ms    | 72.2 ms +- 1.8 ms    | 72.7 ms +- 2.6 ms    |
+| 16 | create_gc_cycles         | 1.79 ms +- 0.05 ms   | 1.78 ms +- 0.05 ms   | 1.78 ms +- 0.06 ms   | 1.77 ms +- 0.05 ms   | 1.78 ms +- 0.04 ms   | 1.77 ms +- 0.05 ms   | 1.79 ms +- 0.10 ms   | 1.79 ms +- 0.05 ms   |
+| 17 | crypto_pyaes             | 167 ms +- 11 ms      | 165 ms +- 10 ms      | 166 ms +- 11 ms      | 166 ms +- 4 ms       | 167 ms +- 5 ms       | 166 ms +- 8 ms       | 167 ms +- 8 ms       | 166 ms +- 2 ms       |
+| 18 | dask                     | /                    | /                    | /                    | /                    | 954 ms +- 26 ms      | 952 ms +- 29 ms      | 964 ms +- 34 ms      | 955 ms +- 25 ms      |
+| 19 | deepcopy                 | 692 us +- 23 us      | 702 us +- 41 us      | 696 us +- 26 us      | 682 us +- 26 us      | 687 us +- 32 us      | 680 us +- 29 us      | 685 us +- 63 us      | 687 us +- 47 us      |
+| 20 | deepcopy_memo            | 79.8 us +- 3.4 us    | 80.4 us +- 1.5 us    | 80.7 us +- 4.2 us    | 79.0 us +- 2.6 us    | 80.0 us +- 5.9 us    | 80.2 us +- 2.4 us    | 77.9 us +- 1.4 us    | 78.4 us +- 1.2 us    |
+| 21 | deepcopy_reduce          | 6.12 us +- 0.37 us   | 6.24 us +- 0.24 us   | 6.16 us +- 0.27 us   | 6.04 us +- 0.17 us   | 6.11 us +- 0.23 us   | 6.03 us +- 0.22 us   | 6.01 us +- 0.14 us   | 5.98 us +- 0.25 us   |
+| 22 | deltablue                | 11.9 ms +- 0.6 ms    | 11.7 ms +- 0.4 ms    | 11.9 ms +- 0.8 ms    | 11.8 ms +- 0.7 ms    | 11.8 ms +- 0.4 ms    | 11.9 ms +- 0.8 ms    | 11.7 ms +- 0.3 ms    | 11.7 ms +- 0.6 ms    |
+| 23 | docutils                 | 4.27 sec +- 0.08 sec | 4.31 sec +- 0.08 sec | 4.21 sec +- 0.06 sec | 4.16 sec +- 0.07 sec | 4.18 sec +- 0.07 sec | 4.16 sec +- 0.08 sec | 4.13 sec +- 0.07 sec | 4.14 sec +- 0.07 sec |
+| 24 | dulwich_log              | 116 ms +- 6 ms       | 115 ms +- 3 ms       | 118 ms +- 6 ms       | 115 ms +- 2 ms       | 116 ms +- 8 ms       | 115 ms +- 3 ms       | 114 ms +- 7 ms       | 116 ms +- 7 ms       |
+| 25 | fannkuch                 | 659 ms +- 10 ms      | 661 ms +- 25 ms      | 663 ms +- 21 ms      | 650 ms +- 16 ms      | 652 ms +- 21 ms      | 648 ms +- 15 ms      | 650 ms +- 17 ms      | 646 ms +- 11 ms      |
+| 26 | float                    | 179 ms +- 6 ms       | 178 ms +- 10 ms      | 176 ms +- 6 ms       | 179 ms +- 6 ms       | 176 ms +- 5 ms       | 177 ms +- 5 ms       | 177 ms +- 9 ms       | 175 ms +- 5 ms       |
+| 27 | gc_traversal             | 4.71 ms +- 0.13 ms   | 4.77 ms +- 0.16 ms   | 4.67 ms +- 0.12 ms   | 4.64 ms +- 0.08 ms   | 4.68 ms +- 0.17 ms   | 4.72 ms +- 0.16 ms   | 4.74 ms +- 0.18 ms   | 4.68 ms +- 0.10 ms   |
+| 28 | generators               | 94.3 ms +- 5.1 ms    | 93.7 ms +- 2.0 ms    | 95.5 ms +- 5.4 ms    | 94.6 ms +- 4.2 ms    | 93.5 ms +- 3.6 ms    | 94.2 ms +- 3.4 ms    | 93.0 ms +- 2.3 ms    | 92.3 ms +- 1.1 ms    |
+| 29 | genshi_text              | 45.6 ms +- 2.3 ms    | 45.9 ms +- 1.0 ms    | 44.6 ms +- 1.1 ms    | 45.0 ms +- 1.6 ms    | 46.2 ms +- 3.0 ms    | 46.8 ms +- 2.7 ms    | 45.6 ms +- 1.7 ms    | 47.2 ms +- 5.1 ms    |
+| 30 | genshi_xml               | 92.3 ms +- 5.0 ms    | 89.8 ms +- 3.0 ms    | 88.5 ms +- 3.7 ms    | 89.4 ms +- 5.4 ms    | 90.3 ms +- 3.2 ms    | 90.4 ms +- 3.4 ms    | 92.2 ms +- 6.5 ms    | 88.8 ms +- 1.4 ms    |
+| 31 | go                       | 396 ms +- 10 ms      | 399 ms +- 9 ms       | 400 ms +- 14 ms      | 390 ms +- 6 ms       | 389 ms +- 12 ms      | 387 ms +- 10 ms      | 387 ms +- 14 ms      | 389 ms +- 12 ms      |
+| 32 | hexiom                   | 15.5 ms +- 1.1 ms    | 15.8 ms +- 1.5 ms    | 15.5 ms +- 1.4 ms    | 15.3 ms +- 0.5 ms    | 15.5 ms +- 0.6 ms    | 15.6 ms +- 1.1 ms    | 15.5 ms +- 1.0 ms    | 15.4 ms +- 1.3 ms    |
+| 33 | html5lib                 | 126 ms +- 12 ms      | 128 ms +- 9 ms       | 128 ms +- 10 ms      | 125 ms +- 8 ms       | 126 ms +- 7 ms       | 125 ms +- 10 ms      | 124 ms +- 7 ms       | 125 ms +- 8 ms       |
+| 34 | json_dumps               | 19.5 ms +- 1.5 ms    | 19.5 ms +- 0.8 ms    | 19.5 ms +- 1.2 ms    | 19.0 ms +- 0.8 ms    | 19.1 ms +- 0.7 ms    | 19.0 ms +- 0.4 ms    | 19.1 ms +- 1.1 ms    | 19.0 ms +- 0.7 ms    |
+| 35 | json_loads               | 40.5 us +- 2.4 us    | 39.7 us +- 2.2 us    | 39.2 us +- 1.9 us    | 39.2 us +- 1.3 us    | 39.6 us +- 1.3 us    | 39.5 us +- 2.0 us    | 39.7 us +- 1.0 us    | 39.2 us +- 1.0 us    |
+| 36 | logging_format           | 14.6 us +- 0.5 us    | 14.4 us +- 0.3 us    | 14.7 us +- 0.6 us    | 14.8 us +- 0.5 us    | 14.3 us +- 0.4 us    | 14.5 us +- 0.5 us    | 14.5 us +- 0.5 us    | 14.5 us +- 0.5 us    |
+| 37 | logging_silent           | 301 ns +- 11 ns      | 304 ns +- 32 ns      | 303 ns +- 15 ns      | 301 ns +- 12 ns      | 306 ns +- 17 ns      | 304 ns +- 12 ns      | 305 ns +- 20 ns      | 301 ns +- 16 ns      |
+| 38 | logging_simple           | 13.2 us +- 0.5 us    | 13.4 us +- 0.5 us    | 13.4 us +- 0.7 us    | 13.5 us +- 0.9 us    | 13.3 us +- 0.6 us    | 13.3 us +- 0.4 us    | 13.2 us +- 0.3 us    | 13.3 us +- 0.6 us    |
+| 39 | mako                     | 27.9 ms +- 2.5 ms    | 27.1 ms +- 1.1 ms    | 26.7 ms +- 0.8 ms    | 27.2 ms +- 2.3 ms    | 26.8 ms +- 1.7 ms    | 26.8 ms +- 1.1 ms    | 26.6 ms +- 2.6 ms    | 26.4 ms +- 1.0 ms    |
+| 40 | mdp                      | 4.41 sec +- 0.07 sec | 4.40 sec +- 0.07 sec | 4.35 sec +- 0.07 sec | 4.33 sec +- 0.07 sec | 4.35 sec +- 0.07 sec | 4.34 sec +- 0.07 sec | 4.29 sec +- 0.06 sec | 4.29 sec +- 0.06 sec |
+| 41 | meteor_contest           | 147 ms +- 5 ms       | 145 ms +- 2 ms       | 146 ms +- 6 ms       | 145 ms +- 5 ms       | 146 ms +- 5 ms       | 147 ms +- 7 ms       | 146 ms +- 5 ms       | 145 ms +- 3 ms       |
+| 42 | nbody                    | 197 ms +- 4 ms       | 187 ms +- 6 ms       | 200 ms +- 14 ms      | 184 ms +- 6 ms       | 180 ms +- 4 ms       | 188 ms +- 12 ms      | 183 ms +- 4 ms       | 183 ms +- 7 ms       |
+| 43 | nqueens                  | 145 ms +- 5 ms       | 148 ms +- 16 ms      | 146 ms +- 4 ms       | 143 ms +- 2 ms       | 144 ms +- 5 ms       | 146 ms +- 8 ms       | 144 ms +- 3 ms       | 144 ms +- 4 ms       |
+| 44 | pathlib                  | 39.3 ms +- 3.7 ms    | 38.8 ms +- 3.4 ms    | 36.9 ms +- 1.1 ms    | 36.6 ms +- 1.1 ms    | 37.0 ms +- 1.0 ms    | 37.1 ms +- 1.6 ms    | 37.1 ms +- 2.0 ms    | 36.4 ms +- 1.3 ms    |
+| 45 | pickle                   | 13.6 us +- 0.4 us    | 13.8 us +- 0.9 us    | 14.0 us +- 0.7 us    | 14.2 us +- 1.0 us    | 14.0 us +- 0.6 us    | 13.9 us +- 0.8 us    | 13.8 us +- 0.7 us    | 13.8 us +- 0.6 us    |
+| 46 | pickle_dict              | 37.7 us +- 0.8 us    | 37.0 us +- 1.8 us    | 37.8 us +- 1.9 us    | 37.5 us +- 1.8 us    | 37.5 us +- 0.9 us    | 37.9 us +- 2.1 us    | 37.4 us +- 1.6 us    | 37.8 us +- 2.2 us    |
+| 47 | pickle_list              | 5.57 us +- 0.32 us   | 5.65 us +- 0.56 us   | 5.60 us +- 0.52 us   | 5.41 us +- 0.25 us   | 5.44 us +- 0.28 us   | 5.44 us +- 0.44 us   | 5.43 us +- 0.25 us   | 5.41 us +- 0.37 us   |
+| 48 | pickle_pure_python       | 743 us +- 70 us      | 744 us +- 54 us      | 737 us +- 43 us      | 726 us +- 24 us      | 724 us +- 38 us      | 719 us +- 22 us      | 718 us +- 17 us      | 726 us +- 38 us      |
+| 49 | pidigits                 | 235 ms +- 4 ms       | 236 ms +- 5 ms       | 237 ms +- 10 ms      | 236 ms +- 4 ms       | 236 ms +- 5 ms       | 239 ms +- 8 ms       | 235 ms +- 8 ms       | 237 ms +- 5 ms       |
+| 50 | pprint_pformat           | 2.26 sec +- 0.04 sec | 2.25 sec +- 0.05 sec | 2.27 sec +- 0.04 sec | 2.24 sec +- 0.04 sec | 2.24 sec +- 0.05 sec | 2.25 sec +- 0.05 sec | 2.23 sec +- 0.04 sec | 2.24 sec +- 0.06 sec |
+| 51 | pyflate                  | 1.05 sec +- 0.02 sec | 1.05 sec +- 0.03 sec | 1.05 sec +- 0.03 sec | 1.03 sec +- 0.02 sec | 1.02 sec +- 0.02 sec | 1.03 sec +- 0.02 sec | 1.02 sec +- 0.02 sec | 1.03 sec +- 0.03 sec |
+| 52 | python_startup           | 13.8 ms +- 0.8 ms    | 13.8 ms +- 0.8 ms    | 13.6 ms +- 0.8 ms    | 13.5 ms +- 0.9 ms    | 13.6 ms +- 0.8 ms    | 13.7 ms +- 0.8 ms    | 13.4 ms +- 0.7 ms    | 13.6 ms +- 0.7 ms    |
+| 53 | python_startup_no_site   | 9.05 ms +- 0.61 ms   | 9.00 ms +- 0.62 ms   | 8.80 ms +- 0.49 ms   | 8.62 ms +- 0.32 ms   | 8.67 ms +- 0.38 ms   | 8.72 ms +- 0.44 ms   | 8.68 ms +- 0.42 ms   | 8.90 ms +- 0.65 ms   |
+| 54 | raytrace                 | 839 ms +- 21 ms      | 831 ms +- 21 ms      | 822 ms +- 15 ms      | 823 ms +- 24 ms      | 827 ms +- 17 ms      | 826 ms +- 21 ms      | 820 ms +- 19 ms      | 808 ms +- 13 ms      |
+| 55 | regex_compile            | 256 ms +- 7 ms       | 263 ms +- 12 ms      | 256 ms +- 8 ms       | 255 ms +- 7 ms       | 257 ms +- 13 ms      | 255 ms +- 10 ms      | 254 ms +- 6 ms       | 256 ms +- 9 ms       |
+| 56 | regex_dna                | 237 ms +- 12 ms      | 234 ms +- 4 ms       | 232 ms +- 10 ms      | 230 ms +- 2 ms       | 230 ms +- 5 ms       | 235 ms +- 11 ms      | 231 ms +- 6 ms       | 232 ms +- 5 ms       |
+| 57 | regex_effbot             | 3.93 ms +- 0.15 ms   | 4.01 ms +- 0.22 ms   | 3.75 ms +- 0.14 ms   | 3.74 ms +- 0.10 ms   | 3.74 ms +- 0.11 ms   | 3.78 ms +- 0.33 ms   | 3.78 ms +- 0.17 ms   | 3.77 ms +- 0.16 ms   |
+| 58 | regex_v8                 | 32.0 ms +- 2.2 ms    | 31.2 ms +- 1.6 ms    | 31.5 ms +- 2.7 ms    | 31.3 ms +- 2.9 ms    | 31.5 ms +- 1.6 ms    | 31.2 ms +- 1.4 ms    | 31.2 ms +- 0.7 ms    | 32.1 ms +- 1.9 ms    |
+| 59 | richards                 | 120 ms +- 10 ms      | 116 ms +- 3 ms       | 117 ms +- 5 ms       | 118 ms +- 8 ms       | 114 ms +- 5 ms       | 116 ms +- 5 ms       | 115 ms +- 3 ms       | 115 ms +- 5 ms       |
+| 60 | richards_super           | 141 ms +- 8 ms       | 138 ms +- 5 ms       | 138 ms +- 5 ms       | 138 ms +- 5 ms       | 134 ms +- 2 ms       | 136 ms +- 3 ms       | 138 ms +- 4 ms       | 136 ms +- 6 ms       |
+| 61 | scimark_fft              | 526 ms +- 10 ms      | 525 ms +- 13 ms      | 524 ms +- 14 ms      | 513 ms +- 15 ms      | 513 ms +- 19 ms      | 511 ms +- 9 ms       | 507 ms +- 16 ms      | 508 ms +- 9 ms       |
+| 62 | scimark_lu               | 231 ms +- 14 ms      | 265 ms +- 10 ms      | 232 ms +- 16 ms      | 248 ms +- 16 ms      | 244 ms +- 12 ms      | 237 ms +- 12 ms      | 241 ms +- 11 ms      | 242 ms +- 12 ms      |
+| 63 | scimark_monte_carlo      | 158 ms +- 6 ms       | 164 ms +- 7 ms       | 162 ms +- 5 ms       | 161 ms +- 6 ms       | 155 ms +- 7 ms       | 156 ms +- 8 ms       | 158 ms +- 11 ms      | 155 ms +- 8 ms       |
+| 64 | scimark_sor              | 306 ms +- 11 ms      | 316 ms +- 14 ms      | 308 ms +- 13 ms      | 315 ms +- 22 ms      | 307 ms +- 12 ms      | 310 ms +- 11 ms      | 308 ms +- 13 ms      | 306 ms +- 11 ms      |
+| 65 | scimark_sparse_mat_mult  | 6.29 ms +- 0.19 ms   | 6.48 ms +- 0.16 ms   | 6.51 ms +- 0.26 ms   | 6.58 ms +- 0.49 ms   | 6.52 ms +- 0.20 ms   | 6.62 ms +- 0.36 ms   | 6.57 ms +- 0.18 ms   | 6.78 ms +- 0.73 ms   |
+| 66 | spectral_norm            | 203 ms +- 4 ms       | 203 ms +- 7 ms       | 204 ms +- 4 ms       | 201 ms +- 13 ms      | 204 ms +- 12 ms      | 204 ms +- 8 ms       | 200 ms +- 10 ms      | 204 ms +- 9 ms       |
+| 67 | sqlalchemy_declarative   | 228 ms +- 7 ms       | 232 ms +- 12 ms      | 229 ms +- 11 ms      | 225 ms +- 7 ms       | 227 ms +- 10 ms      | 226 ms +- 8 ms       | 225 ms +- 9 ms       | 228 ms +- 15 ms      |
+| 68 | sqlalchemy_imperative    | 32.4 ms +- 2.2 ms    | 33.0 ms +- 2.4 ms    | 32.3 ms +- 2.4 ms    | 32.0 ms +- 1.8 ms    | 32.1 ms +- 2.2 ms    | 31.5 ms +- 1.8 ms    | 32.4 ms +- 3.3 ms    | 31.6 ms +- 1.4 ms    |
+| 69 | sqlglot_normalize        | 202 ms +- 7 ms       | 208 ms +- 10 ms      | 200 ms +- 7 ms       | 198 ms +- 5 ms       | 200 ms +- 7 ms       | 201 ms +- 10 ms      | 199 ms +- 5 ms       | 200 ms +- 6 ms       |
+| 70 | sqlglot_optimize         | 95.2 ms +- 3.1 ms    | 99.5 ms +- 6.2 ms    | 95.0 ms +- 2.4 ms    | 94.9 ms +- 2.4 ms    | 97.9 ms +- 3.5 ms    | 96.2 ms +- 4.4 ms    | 95.7 ms +- 2.8 ms    | 96.2 ms +- 3.1 ms    |
+| 71 | sqlglot_parse            | 3.32 ms +- 0.16 ms   | 3.44 ms +- 0.14 ms   | 3.45 ms +- 0.29 ms   | 3.38 ms +- 0.09 ms   | 3.40 ms +- 0.13 ms   | 3.32 ms +- 0.13 ms   | 3.32 ms +- 0.07 ms   | 3.37 ms +- 0.12 ms   |
+| 72 | sqlglot_transpile        | 3.85 ms +- 0.17 ms   | 4.03 ms +- 0.29 ms   | 3.91 ms +- 0.08 ms   | 3.85 ms +- 0.06 ms   | 3.88 ms +- 0.16 ms   | 3.85 ms +- 0.14 ms   | 3.85 ms +- 0.13 ms   | 3.95 ms +- 0.26 ms   |
+| 73 | sqlite_synth             | 4.30 us +- 0.36 us   | 4.23 us +- 0.22 us   | 4.24 us +- 0.22 us   | 4.26 us +- 0.16 us   | 4.18 us +- 0.22 us   | 4.16 us +- 0.14 us   | 4.20 us +- 0.15 us   | 4.21 us +- 0.14 us   |
+| 74 | sympy_expand             | 753 ms +- 19 ms      | 757 ms +- 21 ms      | 755 ms +- 22 ms      | 751 ms +- 21 ms      | 753 ms +- 26 ms      | 751 ms +- 18 ms      | 755 ms +- 18 ms      | 756 ms +- 23 ms      |
+| 75 | sympy_integrate          | 34.0 ms +- 0.9 ms    | 34.4 ms +- 1.4 ms    | 33.5 ms +- 1.1 ms    | 33.6 ms +- 2.1 ms    | 34.1 ms +- 1.8 ms    | 33.7 ms +- 1.4 ms    | 33.8 ms +- 1.4 ms    | 33.6 ms +- 0.8 ms    |
+| 76 | sympy_str                | 467 ms +- 20 ms      | 466 ms +- 10 ms      | 461 ms +- 13 ms      | 456 ms +- 9 ms       | 463 ms +- 14 ms      | 463 ms +- 18 ms      | 463 ms +- 16 ms      | 461 ms +- 13 ms      |
+| 77 | sympy_sum                | 262 ms +- 12 ms      | 264 ms +- 9 ms       | 261 ms +- 10 ms      | 264 ms +- 11 ms      | 261 ms +- 11 ms      | 260 ms +- 11 ms      | 259 ms +- 9 ms       | 264 ms +- 10 ms      |
+| 78 | telco                    | 9.57 ms +- 0.68 ms   | 9.37 ms +- 0.63 ms   | 9.08 ms +- 0.40 ms   | 9.17 ms +- 0.31 ms   | 9.14 ms +- 0.48 ms   | 9.06 ms +- 0.34 ms   | 9.15 ms +- 0.55 ms   | 9.00 ms +- 0.35 ms   |
+| 79 | tomli_loads              | 4.06 sec +- 0.08 sec | 4.10 sec +- 0.08 sec | 4.05 sec +- 0.07 sec | 4.00 sec +- 0.07 sec | 3.96 sec +- 0.08 sec | 3.96 sec +- 0.07 sec | 3.92 sec +- 0.07 sec | 3.92 sec +- 0.07 sec |
+| 80 | tornado_http             | 229 ms +- 15 ms      | 227 ms +- 11 ms      | 220 ms +- 11 ms      | 219 ms +- 14 ms      | 222 ms +- 14 ms      | 219 ms +- 11 ms      | 220 ms +- 14 ms      | 224 ms +- 15 ms      |
+| 81 | typing_runtime_protocols | 802 us +- 37 us      | 788 us +- 13 us      | 787 us +- 27 us      | 804 us +- 71 us      | 805 us +- 25 us      | 798 us +- 39 us      | 796 us +- 16 us      | 795 us +- 29 us      |
+| 82 | unpack_sequence          | 69.8 ns +- 2.3 ns    | 70.6 ns +- 5.0 ns    | 69.7 ns +- 5.2 ns    | 66.9 ns +- 5.5 ns    | 66.1 ns +- 3.3 ns    | 65.4 ns +- 1.2 ns    | 65.5 ns +- 1.6 ns    | 65.9 ns +- 4.9 ns    |
+| 83 | unpickle                 | 21.5 us +- 2.3 us    | 20.9 us +- 0.6 us    | 20.9 us +- 1.1 us    | 20.8 us +- 0.7 us    | 21.3 us +- 1.2 us    | 20.7 us +- 0.4 us    | 20.7 us +- 0.5 us    | 21.2 us +- 1.1 us    |
+| 84 | unpickle_list            | 6.03 us +- 0.21 us   | 6.05 us +- 0.43 us   | 6.02 us +- 0.51 us   | 6.08 us +- 0.29 us   | 6.22 us +- 0.31 us   | 6.20 us +- 0.57 us   | 6.17 us +- 0.37 us   | 6.20 us +- 0.53 us   |
+| 85 | unpickle_pure_python     | 496 us +- 18 us      | 500 us +- 15 us      | 500 us +- 25 us      | 497 us +- 29 us      | 495 us +- 12 us      | 491 us +- 25 us      | 490 us +- 16 us      | 486 us +- 11 us      |
+| 86 | xml_etree_generate       | 145 ms +- 9 ms       | 147 ms +- 10 ms      | 145 ms +- 5 ms       | 145 ms +- 11 ms      | 148 ms +- 13 ms      | 144 ms +- 6 ms       | 146 ms +- 7 ms       | 145 ms +- 3 ms       |
+| 87 | xml_etree_iterparse      | 148 ms +- 6 ms       | 147 ms +- 7 ms       | 143 ms +- 5 ms       | 143 ms +- 9 ms       | 141 ms +- 3 ms       | 142 ms +- 4 ms       | 145 ms +- 9 ms       | 144 ms +- 6 ms       |
+| 88 | xml_etree_parse          | 207 ms +- 11 ms      | 205 ms +- 6 ms       | 200 ms +- 6 ms       | 200 ms +- 7 ms       | 204 ms +- 10 ms      | 201 ms +- 5 ms       | 200 ms +- 5 ms       | 206 ms +- 14 ms      |
+| 89 | xml_etree_process        | 116 ms +- 9 ms       | 115 ms +- 5 ms       | 114 ms +- 6 ms       | 113 ms +- 2 ms       | 113 ms +- 7 ms       | 113 ms +- 4 ms       | 114 ms +- 5 ms       | 115 ms +- 4 ms       |
 
 ### 3.Calculation(UNIT: ms)
-|     | Task                     | 3.8.0      | 3.8.1      | 3.8.2      | 3.8.3      | 3.8.4      | 3.8.5      | 3.8.6      |
-|:----|:-------------------------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| 0   | 2to3                     | 496.0      | 498.0      | 491.0      | 489.0      | 485.0      | 490.0      | 486.0      |
-| 1   | async_generators         | 563.0      | 564.0      | 557.0      | 557.0      | 555.0      | 550.0      | 548.0      |
-| 2   | async_tree_cpu_io_mixed  | 1410.0     | 1410.0     | 1390.0     | 1420.0     | 1410.0     | 1390.0     | 1380.0     |
-| 3   | async_tree_io            | 2530.0     | 2540.0     | 2530.0     | 2490.0     | 2490.0     | 2470.0     | 2450.0     |
-| 4   | async_tree_memoization   | 1270.0     | 1280.0     | 1240.0     | 1260.0     | 1250.0     | 1250.0     | 1230.0     |
-| 5   | async_tree_none          | 1040.0     | 1050.0     | 1040.0     | 1030.0     | 1020.0     | 1010.0     | 1010.0     |
-| 6   | asyncio_tcp              | 1420.0     | 1400.0     | 1410.0     | 1380.0     | 1340.0     | 1340.0     | 1320.0     |
-| 7   | asyncio_tcp_ssl          | 3450.0     | 3700.0     | 3280.0     | 3640.0     | 3700.0     | 3670.0     | 3820.0     |
-| 8   | asyncio_websockets       | 629.0      | 624.0      | 630.0      | 624.0      | 628.0      | 621.0      | 621.0      |
-| 9   | bench_mp_pool            | 11.6       | 12.0       | 11.8       | 11.9       | 11.6       | 11.5       | 11.3       |
-| 10  | bench_thread_pool        | 1.83       | 1.8        | 1.81       | 1.81       | 1.8        | 1.79       | 1.76       |
-| 11  | chameleon                | 15.1       | 14.9       | 15.0       | 14.9       | 14.9       | 14.7       | 14.6       |
-| 12  | chaos                    | 179.0      | 181.0      | 180.0      | 175.0      | 175.0      | 178.0      | 177.0      |
-| 13  | comprehensions           | 0.0405     | 0.0412     | 0.0407     | 0.0413     | 0.041      | 0.0409     | 0.0413     |
-| 14  | coroutines               | 61.0       | 60.4       | 59.7       | 59.5       | 60.1       | 60.4       | 60.2       |
-| 15  | coverage                 | 72.0       | 73.3       | 71.7       | 73.4       | 73.1       | 72.6       | 72.2       |
-| 16  | create_gc_cycles         | 1.79       | 1.78       | 1.78       | 1.77       | 1.78       | 1.77       | 1.79       |
-| 17  | crypto_pyaes             | 167.0      | 165.0      | 166.0      | 166.0      | 167.0      | 166.0      | 167.0      |
-| 18  | dask                     | /          | /          | /          | /          | 954.0      | 952.0      | 964.0      |
-| 19  | deepcopy                 | 0.692      | 0.702      | 0.696      | 0.682      | 0.687      | 0.68       | 0.685      |
-| 20  | deepcopy_memo            | 0.0798     | 0.0804     | 0.0807     | 0.079      | 0.08       | 0.0802     | 0.0779     |
-| 21  | deepcopy_reduce          | 0.0061     | 0.0062     | 0.0062     | 0.006      | 0.0061     | 0.006      | 0.006      |
-| 22  | deltablue                | 11.9       | 11.7       | 11.9       | 11.8       | 11.8       | 11.9       | 11.7       |
-| 23  | docutils                 | 4270.0     | 4310.0     | 4210.0     | 4160.0     | 4180.0     | 4160.0     | 4130.0     |
-| 24  | dulwich_log              | 116.0      | 115.0      | 118.0      | 115.0      | 116.0      | 115.0      | 114.0      |
-| 25  | fannkuch                 | 659.0      | 661.0      | 663.0      | 650.0      | 652.0      | 648.0      | 650.0      |
-| 26  | float                    | 179.0      | 178.0      | 176.0      | 179.0      | 176.0      | 177.0      | 177.0      |
-| 27  | gc_traversal             | 4.71       | 4.77       | 4.67       | 4.64       | 4.68       | 4.72       | 4.74       |
-| 28  | generators               | 94.3       | 93.7       | 95.5       | 94.6       | 93.5       | 94.2       | 93.0       |
-| 29  | genshi_text              | 45.6       | 45.9       | 44.6       | 45.0       | 46.2       | 46.8       | 45.6       |
-| 30  | genshi_xml               | 92.3       | 89.8       | 88.5       | 89.4       | 90.3       | 90.4       | 92.2       |
-| 31  | go                       | 396.0      | 399.0      | 400.0      | 390.0      | 389.0      | 387.0      | 387.0      |
-| 32  | hexiom                   | 15.5       | 15.8       | 15.5       | 15.3       | 15.5       | 15.6       | 15.5       |
-| 33  | html5lib                 | 126.0      | 128.0      | 128.0      | 125.0      | 126.0      | 125.0      | 124.0      |
-| 34  | json_dumps               | 19.5       | 19.5       | 19.5       | 19.0       | 19.1       | 19.0       | 19.1       |
-| 35  | json_loads               | 0.0405     | 0.0397     | 0.0392     | 0.0392     | 0.0396     | 0.0395     | 0.0397     |
-| 36  | logging_format           | 0.0146     | 0.0144     | 0.0147     | 0.0148     | 0.0143     | 0.0145     | 0.0145     |
-| 37  | logging_silent           | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     |
-| 38  | logging_simple           | 0.0132     | 0.0134     | 0.0134     | 0.0135     | 0.0133     | 0.0133     | 0.0132     |
-| 39  | mako                     | 27.9       | 27.1       | 26.7       | 27.2       | 26.8       | 26.8       | 26.6       |
-| 40  | mdp                      | 4410.0     | 4400.0     | 4350.0     | 4330.0     | 4350.0     | 4340.0     | 4290.0     |
-| 41  | meteor_contest           | 147.0      | 145.0      | 146.0      | 145.0      | 146.0      | 147.0      | 146.0      |
-| 42  | nbody                    | 197.0      | 187.0      | 200.0      | 184.0      | 180.0      | 188.0      | 183.0      |
-| 43  | nqueens                  | 145.0      | 148.0      | 146.0      | 143.0      | 144.0      | 146.0      | 144.0      |
-| 44  | pathlib                  | 39.3       | 38.8       | 36.9       | 36.6       | 37.0       | 37.1       | 37.1       |
-| 45  | pickle                   | 0.0136     | 0.0138     | 0.014      | 0.0142     | 0.014      | 0.0139     | 0.0138     |
-| 46  | pickle_dict              | 0.0377     | 0.037      | 0.0378     | 0.0375     | 0.0375     | 0.0379     | 0.0374     |
-| 47  | pickle_list              | 0.0056     | 0.0057     | 0.0056     | 0.0054     | 0.0054     | 0.0054     | 0.0054     |
-| 48  | pickle_pure_python       | 0.743      | 0.744      | 0.737      | 0.726      | 0.724      | 0.719      | 0.718      |
-| 49  | pidigits                 | 235.0      | 236.0      | 237.0      | 236.0      | 236.0      | 239.0      | 235.0      |
-| 50  | pprint_pformat           | 2260.0     | 2250.0     | 2270.0     | 2240.0     | 2240.0     | 2250.0     | 2230.0     |
-| 51  | pyflate                  | 1050.0     | 1050.0     | 1050.0     | 1030.0     | 1020.0     | 1030.0     | 1020.0     |
-| 52  | python_startup           | 13.8       | 13.8       | 13.6       | 13.5       | 13.6       | 13.7       | 13.4       |
-| 53  | python_startup_no_site   | 9.05       | 9.0        | 8.8        | 8.62       | 8.67       | 8.72       | 8.68       |
-| 54  | raytrace                 | 839.0      | 831.0      | 822.0      | 823.0      | 827.0      | 826.0      | 820.0      |
-| 55  | regex_compile            | 256.0      | 263.0      | 256.0      | 255.0      | 257.0      | 255.0      | 254.0      |
-| 56  | regex_dna                | 237.0      | 234.0      | 232.0      | 230.0      | 230.0      | 235.0      | 231.0      |
-| 57  | regex_effbot             | 3.93       | 4.01       | 3.75       | 3.74       | 3.74       | 3.78       | 3.78       |
-| 58  | regex_v8                 | 32.0       | 31.2       | 31.5       | 31.3       | 31.5       | 31.2       | 31.2       |
-| 59  | richards                 | 120.0      | 116.0      | 117.0      | 118.0      | 114.0      | 116.0      | 115.0      |
-| 60  | richards_super           | 141.0      | 138.0      | 138.0      | 138.0      | 134.0      | 136.0      | 138.0      |
-| 61  | scimark_fft              | 526.0      | 525.0      | 524.0      | 513.0      | 513.0      | 511.0      | 507.0      |
-| 62  | scimark_lu               | 231.0      | 265.0      | 232.0      | 248.0      | 244.0      | 237.0      | 241.0      |
-| 63  | scimark_monte_carlo      | 158.0      | 164.0      | 162.0      | 161.0      | 155.0      | 156.0      | 158.0      |
-| 64  | scimark_sor              | 306.0      | 316.0      | 308.0      | 315.0      | 307.0      | 310.0      | 308.0      |
-| 65  | scimark_sparse_mat_mult  | 6.29       | 6.48       | 6.51       | 6.58       | 6.52       | 6.62       | 6.57       |
-| 66  | spectral_norm            | 203.0      | 203.0      | 204.0      | 201.0      | 204.0      | 204.0      | 200.0      |
-| 67  | sqlalchemy_declarative   | 228.0      | 232.0      | 229.0      | 225.0      | 227.0      | 226.0      | 225.0      |
-| 68  | sqlalchemy_imperative    | 32.4       | 33.0       | 32.3       | 32.0       | 32.1       | 31.5       | 32.4       |
-| 69  | sqlglot_normalize        | 202.0      | 208.0      | 200.0      | 198.0      | 200.0      | 201.0      | 199.0      |
-| 70  | sqlglot_optimize         | 95.2       | 99.5       | 95.0       | 94.9       | 97.9       | 96.2       | 95.7       |
-| 71  | sqlglot_parse            | 3.32       | 3.44       | 3.45       | 3.38       | 3.4        | 3.32       | 3.32       |
-| 72  | sqlglot_transpile        | 3.85       | 4.03       | 3.91       | 3.85       | 3.88       | 3.85       | 3.85       |
-| 73  | sqlite_synth             | 0.0043     | 0.0042     | 0.0042     | 0.0043     | 0.0042     | 0.0042     | 0.0042     |
-| 74  | sympy_expand             | 753.0      | 757.0      | 755.0      | 751.0      | 753.0      | 751.0      | 755.0      |
-| 75  | sympy_integrate          | 34.0       | 34.4       | 33.5       | 33.6       | 34.1       | 33.7       | 33.8       |
-| 76  | sympy_str                | 467.0      | 466.0      | 461.0      | 456.0      | 463.0      | 463.0      | 463.0      |
-| 77  | sympy_sum                | 262.0      | 264.0      | 261.0      | 264.0      | 261.0      | 260.0      | 259.0      |
-| 78  | telco                    | 9.57       | 9.37       | 9.08       | 9.17       | 9.14       | 9.06       | 9.15       |
-| 79  | tomli_loads              | 4060.0     | 4100.0     | 4050.0     | 4000.0     | 3960.0     | 3960.0     | 3920.0     |
-| 80  | tornado_http             | 229.0      | 227.0      | 220.0      | 219.0      | 222.0      | 219.0      | 220.0      |
-| 81  | typing_runtime_protocols | 0.802      | 0.788      | 0.787      | 0.804      | 0.805      | 0.798      | 0.796      |
-| 82  | unpack_sequence          | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     |
-| 83  | unpickle                 | 0.0215     | 0.0209     | 0.0209     | 0.0208     | 0.0213     | 0.0207     | 0.0207     |
-| 84  | unpickle_list            | 0.006      | 0.006      | 0.006      | 0.0061     | 0.0062     | 0.0062     | 0.0062     |
-| 85  | unpickle_pure_python     | 0.496      | 0.5        | 0.5        | 0.497      | 0.495      | 0.491      | 0.49       |
-| 86  | xml_etree_generate       | 145.0      | 147.0      | 145.0      | 145.0      | 148.0      | 144.0      | 146.0      |
-| 87  | xml_etree_iterparse      | 148.0      | 147.0      | 143.0      | 143.0      | 141.0      | 142.0      | 145.0      |
-| 88  | xml_etree_parse          | 207.0      | 205.0      | 200.0      | 200.0      | 204.0      | 201.0      | 200.0      |
-| 89  | xml_etree_process        | 116.0      | 115.0      | 114.0      | 113.0      | 113.0      | 113.0      | 114.0      |
-| SUM |                          | 37938.7568 | 38304.4973 | 37530.9638 | 37624.4515 | 38561.7043 | 38458.9011 | 38373.2097 |
-| AVG |                          | 426.2782   | 430.3876   | 421.6962   | 422.7466   | 428.4634   | 427.3211   | 426.369    |
-| UP% |                          | 101.6420%  | 100.6715%  | 102.7464%  | 102.4911%  | 100.0000%  | 100.2673%  | 100.4912%  |
+|     | Task                     | 3.8.0      | 3.8.1      | 3.8.2      | 3.8.3      | 3.8.4      | 3.8.5      | 3.8.6      | 3.8.7      |
+|:----|:-------------------------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
+| 0   | 2to3                     | 496.0      | 498.0      | 491.0      | 489.0      | 485.0      | 490.0      | 486.0      | 487.0      |
+| 1   | async_generators         | 563.0      | 564.0      | 557.0      | 557.0      | 555.0      | 550.0      | 548.0      | 553.0      |
+| 2   | async_tree_cpu_io_mixed  | 1410.0     | 1410.0     | 1390.0     | 1420.0     | 1410.0     | 1390.0     | 1380.0     | 1390.0     |
+| 3   | async_tree_io            | 2530.0     | 2540.0     | 2530.0     | 2490.0     | 2490.0     | 2470.0     | 2450.0     | 2470.0     |
+| 4   | async_tree_memoization   | 1270.0     | 1280.0     | 1240.0     | 1260.0     | 1250.0     | 1250.0     | 1230.0     | 1250.0     |
+| 5   | async_tree_none          | 1040.0     | 1050.0     | 1040.0     | 1030.0     | 1020.0     | 1010.0     | 1010.0     | 1010.0     |
+| 6   | asyncio_tcp              | 1420.0     | 1400.0     | 1410.0     | 1380.0     | 1340.0     | 1340.0     | 1320.0     | 1370.0     |
+| 7   | asyncio_tcp_ssl          | 3450.0     | 3700.0     | 3280.0     | 3640.0     | 3700.0     | 3670.0     | 3820.0     | 3580.0     |
+| 8   | asyncio_websockets       | 629.0      | 624.0      | 630.0      | 624.0      | 628.0      | 621.0      | 621.0      | 621.0      |
+| 9   | bench_mp_pool            | 11.6       | 12.0       | 11.8       | 11.9       | 11.6       | 11.5       | 11.3       | 11.8       |
+| 10  | bench_thread_pool        | 1.83       | 1.8        | 1.81       | 1.81       | 1.8        | 1.79       | 1.76       | 1.78       |
+| 11  | chameleon                | 15.1       | 14.9       | 15.0       | 14.9       | 14.9       | 14.7       | 14.6       | 14.5       |
+| 12  | chaos                    | 179.0      | 181.0      | 180.0      | 175.0      | 175.0      | 178.0      | 177.0      | 178.0      |
+| 13  | comprehensions           | 0.0405     | 0.0412     | 0.0407     | 0.0413     | 0.041      | 0.0409     | 0.0413     | 0.0413     |
+| 14  | coroutines               | 61.0       | 60.4       | 59.7       | 59.5       | 60.1       | 60.4       | 60.2       | 60.0       |
+| 15  | coverage                 | 72.0       | 73.3       | 71.7       | 73.4       | 73.1       | 72.6       | 72.2       | 72.7       |
+| 16  | create_gc_cycles         | 1.79       | 1.78       | 1.78       | 1.77       | 1.78       | 1.77       | 1.79       | 1.79       |
+| 17  | crypto_pyaes             | 167.0      | 165.0      | 166.0      | 166.0      | 167.0      | 166.0      | 167.0      | 166.0      |
+| 18  | dask                     | /          | /          | /          | /          | 954.0      | 952.0      | 964.0      | 955.0      |
+| 19  | deepcopy                 | 0.692      | 0.702      | 0.696      | 0.682      | 0.687      | 0.68       | 0.685      | 0.687      |
+| 20  | deepcopy_memo            | 0.0798     | 0.0804     | 0.0807     | 0.079      | 0.08       | 0.0802     | 0.0779     | 0.0784     |
+| 21  | deepcopy_reduce          | 0.0061     | 0.0062     | 0.0062     | 0.006      | 0.0061     | 0.006      | 0.006      | 0.006      |
+| 22  | deltablue                | 11.9       | 11.7       | 11.9       | 11.8       | 11.8       | 11.9       | 11.7       | 11.7       |
+| 23  | docutils                 | 4270.0     | 4310.0     | 4210.0     | 4160.0     | 4180.0     | 4160.0     | 4130.0     | 4140.0     |
+| 24  | dulwich_log              | 116.0      | 115.0      | 118.0      | 115.0      | 116.0      | 115.0      | 114.0      | 116.0      |
+| 25  | fannkuch                 | 659.0      | 661.0      | 663.0      | 650.0      | 652.0      | 648.0      | 650.0      | 646.0      |
+| 26  | float                    | 179.0      | 178.0      | 176.0      | 179.0      | 176.0      | 177.0      | 177.0      | 175.0      |
+| 27  | gc_traversal             | 4.71       | 4.77       | 4.67       | 4.64       | 4.68       | 4.72       | 4.74       | 4.68       |
+| 28  | generators               | 94.3       | 93.7       | 95.5       | 94.6       | 93.5       | 94.2       | 93.0       | 92.3       |
+| 29  | genshi_text              | 45.6       | 45.9       | 44.6       | 45.0       | 46.2       | 46.8       | 45.6       | 47.2       |
+| 30  | genshi_xml               | 92.3       | 89.8       | 88.5       | 89.4       | 90.3       | 90.4       | 92.2       | 88.8       |
+| 31  | go                       | 396.0      | 399.0      | 400.0      | 390.0      | 389.0      | 387.0      | 387.0      | 389.0      |
+| 32  | hexiom                   | 15.5       | 15.8       | 15.5       | 15.3       | 15.5       | 15.6       | 15.5       | 15.4       |
+| 33  | html5lib                 | 126.0      | 128.0      | 128.0      | 125.0      | 126.0      | 125.0      | 124.0      | 125.0      |
+| 34  | json_dumps               | 19.5       | 19.5       | 19.5       | 19.0       | 19.1       | 19.0       | 19.1       | 19.0       |
+| 35  | json_loads               | 0.0405     | 0.0397     | 0.0392     | 0.0392     | 0.0396     | 0.0395     | 0.0397     | 0.0392     |
+| 36  | logging_format           | 0.0146     | 0.0144     | 0.0147     | 0.0148     | 0.0143     | 0.0145     | 0.0145     | 0.0145     |
+| 37  | logging_silent           | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     | 0.0003     |
+| 38  | logging_simple           | 0.0132     | 0.0134     | 0.0134     | 0.0135     | 0.0133     | 0.0133     | 0.0132     | 0.0133     |
+| 39  | mako                     | 27.9       | 27.1       | 26.7       | 27.2       | 26.8       | 26.8       | 26.6       | 26.4       |
+| 40  | mdp                      | 4410.0     | 4400.0     | 4350.0     | 4330.0     | 4350.0     | 4340.0     | 4290.0     | 4290.0     |
+| 41  | meteor_contest           | 147.0      | 145.0      | 146.0      | 145.0      | 146.0      | 147.0      | 146.0      | 145.0      |
+| 42  | nbody                    | 197.0      | 187.0      | 200.0      | 184.0      | 180.0      | 188.0      | 183.0      | 183.0      |
+| 43  | nqueens                  | 145.0      | 148.0      | 146.0      | 143.0      | 144.0      | 146.0      | 144.0      | 144.0      |
+| 44  | pathlib                  | 39.3       | 38.8       | 36.9       | 36.6       | 37.0       | 37.1       | 37.1       | 36.4       |
+| 45  | pickle                   | 0.0136     | 0.0138     | 0.014      | 0.0142     | 0.014      | 0.0139     | 0.0138     | 0.0138     |
+| 46  | pickle_dict              | 0.0377     | 0.037      | 0.0378     | 0.0375     | 0.0375     | 0.0379     | 0.0374     | 0.0378     |
+| 47  | pickle_list              | 0.0056     | 0.0057     | 0.0056     | 0.0054     | 0.0054     | 0.0054     | 0.0054     | 0.0054     |
+| 48  | pickle_pure_python       | 0.743      | 0.744      | 0.737      | 0.726      | 0.724      | 0.719      | 0.718      | 0.726      |
+| 49  | pidigits                 | 235.0      | 236.0      | 237.0      | 236.0      | 236.0      | 239.0      | 235.0      | 237.0      |
+| 50  | pprint_pformat           | 2260.0     | 2250.0     | 2270.0     | 2240.0     | 2240.0     | 2250.0     | 2230.0     | 2240.0     |
+| 51  | pyflate                  | 1050.0     | 1050.0     | 1050.0     | 1030.0     | 1020.0     | 1030.0     | 1020.0     | 1030.0     |
+| 52  | python_startup           | 13.8       | 13.8       | 13.6       | 13.5       | 13.6       | 13.7       | 13.4       | 13.6       |
+| 53  | python_startup_no_site   | 9.05       | 9.0        | 8.8        | 8.62       | 8.67       | 8.72       | 8.68       | 8.9        |
+| 54  | raytrace                 | 839.0      | 831.0      | 822.0      | 823.0      | 827.0      | 826.0      | 820.0      | 808.0      |
+| 55  | regex_compile            | 256.0      | 263.0      | 256.0      | 255.0      | 257.0      | 255.0      | 254.0      | 256.0      |
+| 56  | regex_dna                | 237.0      | 234.0      | 232.0      | 230.0      | 230.0      | 235.0      | 231.0      | 232.0      |
+| 57  | regex_effbot             | 3.93       | 4.01       | 3.75       | 3.74       | 3.74       | 3.78       | 3.78       | 3.77       |
+| 58  | regex_v8                 | 32.0       | 31.2       | 31.5       | 31.3       | 31.5       | 31.2       | 31.2       | 32.1       |
+| 59  | richards                 | 120.0      | 116.0      | 117.0      | 118.0      | 114.0      | 116.0      | 115.0      | 115.0      |
+| 60  | richards_super           | 141.0      | 138.0      | 138.0      | 138.0      | 134.0      | 136.0      | 138.0      | 136.0      |
+| 61  | scimark_fft              | 526.0      | 525.0      | 524.0      | 513.0      | 513.0      | 511.0      | 507.0      | 508.0      |
+| 62  | scimark_lu               | 231.0      | 265.0      | 232.0      | 248.0      | 244.0      | 237.0      | 241.0      | 242.0      |
+| 63  | scimark_monte_carlo      | 158.0      | 164.0      | 162.0      | 161.0      | 155.0      | 156.0      | 158.0      | 155.0      |
+| 64  | scimark_sor              | 306.0      | 316.0      | 308.0      | 315.0      | 307.0      | 310.0      | 308.0      | 306.0      |
+| 65  | scimark_sparse_mat_mult  | 6.29       | 6.48       | 6.51       | 6.58       | 6.52       | 6.62       | 6.57       | 6.78       |
+| 66  | spectral_norm            | 203.0      | 203.0      | 204.0      | 201.0      | 204.0      | 204.0      | 200.0      | 204.0      |
+| 67  | sqlalchemy_declarative   | 228.0      | 232.0      | 229.0      | 225.0      | 227.0      | 226.0      | 225.0      | 228.0      |
+| 68  | sqlalchemy_imperative    | 32.4       | 33.0       | 32.3       | 32.0       | 32.1       | 31.5       | 32.4       | 31.6       |
+| 69  | sqlglot_normalize        | 202.0      | 208.0      | 200.0      | 198.0      | 200.0      | 201.0      | 199.0      | 200.0      |
+| 70  | sqlglot_optimize         | 95.2       | 99.5       | 95.0       | 94.9       | 97.9       | 96.2       | 95.7       | 96.2       |
+| 71  | sqlglot_parse            | 3.32       | 3.44       | 3.45       | 3.38       | 3.4        | 3.32       | 3.32       | 3.37       |
+| 72  | sqlglot_transpile        | 3.85       | 4.03       | 3.91       | 3.85       | 3.88       | 3.85       | 3.85       | 3.95       |
+| 73  | sqlite_synth             | 0.0043     | 0.0042     | 0.0042     | 0.0043     | 0.0042     | 0.0042     | 0.0042     | 0.0042     |
+| 74  | sympy_expand             | 753.0      | 757.0      | 755.0      | 751.0      | 753.0      | 751.0      | 755.0      | 756.0      |
+| 75  | sympy_integrate          | 34.0       | 34.4       | 33.5       | 33.6       | 34.1       | 33.7       | 33.8       | 33.6       |
+| 76  | sympy_str                | 467.0      | 466.0      | 461.0      | 456.0      | 463.0      | 463.0      | 463.0      | 461.0      |
+| 77  | sympy_sum                | 262.0      | 264.0      | 261.0      | 264.0      | 261.0      | 260.0      | 259.0      | 264.0      |
+| 78  | telco                    | 9.57       | 9.37       | 9.08       | 9.17       | 9.14       | 9.06       | 9.15       | 9.0        |
+| 79  | tomli_loads              | 4060.0     | 4100.0     | 4050.0     | 4000.0     | 3960.0     | 3960.0     | 3920.0     | 3920.0     |
+| 80  | tornado_http             | 229.0      | 227.0      | 220.0      | 219.0      | 222.0      | 219.0      | 220.0      | 224.0      |
+| 81  | typing_runtime_protocols | 0.802      | 0.788      | 0.787      | 0.804      | 0.805      | 0.798      | 0.796      | 0.795      |
+| 82  | unpack_sequence          | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     | 0.0001     |
+| 83  | unpickle                 | 0.0215     | 0.0209     | 0.0209     | 0.0208     | 0.0213     | 0.0207     | 0.0207     | 0.0212     |
+| 84  | unpickle_list            | 0.006      | 0.006      | 0.006      | 0.0061     | 0.0062     | 0.0062     | 0.0062     | 0.0062     |
+| 85  | unpickle_pure_python     | 0.496      | 0.5        | 0.5        | 0.497      | 0.495      | 0.491      | 0.49       | 0.486      |
+| 86  | xml_etree_generate       | 145.0      | 147.0      | 145.0      | 145.0      | 148.0      | 144.0      | 146.0      | 145.0      |
+| 87  | xml_etree_iterparse      | 148.0      | 147.0      | 143.0      | 143.0      | 141.0      | 142.0      | 145.0      | 144.0      |
+| 88  | xml_etree_parse          | 207.0      | 205.0      | 200.0      | 200.0      | 204.0      | 201.0      | 200.0      | 206.0      |
+| 89  | xml_etree_process        | 116.0      | 115.0      | 114.0      | 113.0      | 113.0      | 113.0      | 114.0      | 115.0      |
+| SUM |                          | 37938.7568 | 38304.4973 | 37530.9638 | 37624.4515 | 38561.7043 | 38458.9011 | 38373.2097 | 38265.2957 |
+| AVG |                          | 426.2782   | 430.3876   | 421.6962   | 422.7466   | 428.4634   | 427.3211   | 426.369    | 425.17     |
+| UP% |                          | 101.6420%  | 100.6715%  | 102.7464%  | 102.4911%  | 100.0000%  | 100.2673%  | 100.4912%  | 100.7746%  |
 
 
 <div align=center>
