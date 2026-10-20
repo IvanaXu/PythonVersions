@@ -78,7 +78,7 @@ FIRST = """
 > https://www.python.org/downloads/
 #### (2) Running Environment
 * Docker gcc library/gcc
-> ecs.u1-c1m2.large/aliyun Intel(R) Xeon(R) Platinum 2核(vCPU) 4 GiB Ubuntu 22.04 64位
+> s6.large.4/HW Intel(R) Xeon(R) Gold 6278C CPU @ 2.60GHz 2vCPUs 8GiB Ubuntu 24.04 server 64bit
 
 #### (3) Test Software
 * [Pyperformance](https://github.com/python/pyperformance)
