@@ -108,7 +108,7 @@ with open("README.md", "w") as f:
     # idf["Rank"] = idf["UP%"].rank(ascending=False).apply(lambda x: max(TOP-int(x)+1, 0) * "🌹")
     # idf["Rank"] = idf["UP%"].rank(ascending=True).apply(lambda x: int(x) * "+")
     
-    TOP = 2
+    TOP = 3
     print(idf)
     idf["Progress"] = idf["UP%"].apply(lambda x: int((float(x[:-1]) - 99)/TOP) * ">")
     idf["rank"] = idf["version"].apply(fTASK)
